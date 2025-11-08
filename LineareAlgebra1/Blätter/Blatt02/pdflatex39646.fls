@@ -1,0 +1,5 @@
+PWD /home/aaron-tsamaltoupis/Desktop/USB/Studium/mathematikLeipzig/LineareAlgebra1/Blätter/Blatt02
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt

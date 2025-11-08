@@ -1,0 +1,238 @@
+\documentclass[a4paper,oneside,11pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[ngerman]{babel} % For correct hyphenation
+
+\usepackage{mathtools}
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[mathscr]{eucal}
+
+\usepackage[textwidth=17cm,top=1.5cm,bottom=1.5cm,nohead]{geometry}
+
+\setlength{\parindent}{0mm} % no paragraph indentation
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Abbreviations
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% single letters in different fonts 
+
+%%%%%%%%%%%% mathematical bold  %%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bH}{\mathbb{H}}
+\newcommand{\bI}{\mathbb{I}}
+\newcommand{\bJ}{\mathbb{J}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bL}{\mathbb{L}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bS}{\mathbb{S}}
+\newcommand{\bT}{\mathbb{T}}
+\newcommand{\bU}{\mathbb{U}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bW}{\mathbb{W}}
+\newcommand{\bX}{\mathbb{X}}
+\newcommand{\bY}{\mathbb{Y}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+
+%%%%%%%%% calligraphic %%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\mc}[1]{\mathcal{#1}}
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+
+%%%%%%%%%%%%% mathematical fraktur  %%%%%%%%%%%%%%%%%%%%%
+\newcommand{\mf}[1]{\mathfrak{#1}}
+
+\newcommand{\fA}{\mathfrak{A}}
+\newcommand{\fB}{\mathfrak{B}}
+\newcommand{\fC}{\mathfrak{C}}
+\newcommand{\fD}{\mathfrak{D}}
+\newcommand{\fE}{\mathfrak{E}}
+\newcommand{\fF}{\mathfrak{F}}
+\newcommand{\fG}{\mathfrak{G}}
+\newcommand{\fH}{\mathfrak{H}}
+\newcommand{\fI}{\mathfrak{I}}
+\newcommand{\fJ}{\mathfrak{J}}
+\newcommand{\fK}{\mathfrak{K}}
+\newcommand{\fL}{\mathfrak{L}}
+\newcommand{\fM}{\mathfrak{M}}
+\newcommand{\fN}{\mathfrak{N}}
+\newcommand{\fO}{\mathfrak{O}}
+\newcommand{\fP}{\mathfrak{P}}
+\newcommand{\fQ}{\mathfrak{Q}}
+\newcommand{\fR}{\mathfrak{R}}
+\newcommand{\fS}{\mathfrak{S}}
+\newcommand{\fT}{\mathfrak{T}}
+\newcommand{\fU}{\mathfrak{U}}
+\newcommand{\fV}{\mathfrak{V}}
+\newcommand{\fW}{\mathfrak{W}}
+\newcommand{\fX}{\mathfrak{X}}
+\newcommand{\fY}{\mathfrak{Y}}
+\newcommand{\fZ}{\mathfrak{Z}}
+
+
+%%%%%%%%%%%%% mathematical script (euler)  %%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ms}[1]{\mathscr{#1}}
+
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+
+%%%%%%%%%%    Math operators    %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\Re}{\mathop{\textnormal{Re}}}  % real part
+\renewcommand{\Im}{\mathop{\textnormal{Im}}}  % imaginary part
+
+
+%%%%%%%%%%%  FURTHER COMMANDS  %%%%%%%%%%%%%%%
+
+\newcommand{\Id}{\mathrm{Id}}
+
+
+%%%%%%%%%%%  STUDENT COMMANDS  %%%%%%%%%%%%%%%
+%% Hier können Sie Ihre eigene LaTeX kommandos hinzufügen. %%
+\newtheorem*{theorem*}{Theorem}
+%% this allows for theorems which are not automatically numbered
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{example}{Example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+	{\Large\bf Aufgaben für Analysis I} \\
+	\medskip
+	\textbf{\large Blatt NUMMER} \\
+	\bigskip
+	\textbf{IHRE NAME}
+\end{center}
+
+\bigskip
+\hrule
+\bigskip\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Aufgabe 3.1}
+\subsection*{8)}
+$h_n=n^k\cdot x^n$, wobei $|x|<1$\\
+
+Es soll durch Induktion gezeigt werden, dass $\forall k\in\mathbb{N}:\exists N\in \mathbb{N}: x^n<\frac{1}{n^k},\forall n<N$.
+\subsubsection*{Induktionsanfang}
+Sei $n>k$, Sei $n$ so gewählt, dass $(\frac{n}{n+1})^k>x$.\\
+Sei $x^n>\frac{1}{n^k}$.\\
+Es gilt demnach:  $x^n=\frac{1}{n^k}+\varepsilon, \varepsilon \in\mathbb{N} $. Für größere n, kann $\varepsilon$ beliebig klein gewählt werden, da sowohl $x^n$, als auch $\frac{1}{n^k}$ gegen 0 konvergieren.\\
+\\
+\begin{align}
+	x^{kn}= & (\frac{1}{n^k}+\varepsilon )^{k}                                    \\
+	        & =\sum^{k}_{i=0}\binom{k}{i}\frac{1}{n^{2k-i}}\cdot \varepsilon ^{i} \\
+	        & <\frac{1}{n^{2k}}                                                   \\
+	        & <\frac{1}{n^{k}\cdot k^k}                                           \\
+	        & =\frac{1}{(kn)^k }                                                  \\
+\end{align}
+Somit gilt $x^{nk}<\frac{1}{nk}$.
+
+
+\subsubsection*{Induktionsschritt}
+Die Folge $(\frac{n}{n+1})$ konvergiert gegen 1.\\
+Somit konvergiert auch die folge $\frac{n}{n+1})^{k})$\\
+Sei also $n$ so gewählt, dass $(\frac{n}{n+1})^{k}>x$. Dies ist moeglich, da $x<1$.\\
+\textbf{Induktionshypothese:} Sei $x^n<\frac{1}{n^k}$.
+\begin{align}
+	x^{n+1} & = x\cdot x^n                                          \\
+	        & < (\frac{n}{n+1})^{k}\cdot x^n                        \\
+	        & \overset{IH}{<}(\frac{n}{n+1})^{k}\cdot \frac{1}{n^k} \\
+	        & = \frac{1}{(n+1)^k}
+\end{align}
+\\\\
+Da gilt $x^n<\frac{1}{n^k	}$, gilt auch:
+$x^{n}\cdot n^{k-1}<\frac{1}{n}, \forall n<N$.\\
+Nach Beispielaufgabe $e7$ konvergiert $\frac{1}{n}$ gegen 0. Da $h(n)>0, \forall n\in\mathbb{N}$ konvergiert die Folge nach Satz 4.8 gegen 0.
+
+
+
+\newpage
+\section*{Aufgabe 3.2}
+
+Sei ein $\varepsilon<0$.\\
+Sei ein $n_0$ gewählt, sodass $|a-a_{n_0}|< \varepsilon $\\
+
+
+Sei ein k gewählt, sodass $\frac{\max\{a_1,\dots ,a_{n_0}, n_0\cdot a+n_0\cdot  \varepsilon\cdot  b\}}{kn_0}<\frac{\varepsilon -|a-a_{n_0}|}{2}$
+\\
+Sei $N>n_0\cdot k$
+
+\begin{align}
+	|\frac{a_1+\dots +a_n}{n}|= |\frac{a_1+\dots +a_{n_0}}{n}+\frac{a_{n_0+1}+\dots +a_{2n_0}}{n}|
+\end{align}
+
+\end{document}
+

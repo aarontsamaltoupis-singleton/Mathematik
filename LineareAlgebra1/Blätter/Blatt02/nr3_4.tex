@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+
+
+\newcommand{\ZZ}{\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}}}
+
+
+\begin{document}
+\subsection*{Nr 3.4}
+Es soll gezeigt werden, dass die Bedingung $ab>0$ eine Notwendige 
+Bedingung für die Aussage $\frac{a}{b}<  \frac{c}{d}\implies \left( \frac{a}{b}< \frac{a+c}{b+d}< \frac{c}{d}\right)$ ist.
+\\\\
+Sei $ad\geq cb$.\\
+Sei $\frac{a}{b}=\frac{ad}{bd}>\frac{cb}{db}=\frac{c}{d}$\\
+Daraus folgt: \\
+$ad\geq cb$\\\\
+Es gilt: \\
+$bd+d^2\leq0 \lor bd+b^2 \leq 0$.
+\\\\
+\textbf{Beweis nach Fallunterscheidung: }\\
+Sei $bd+b^2\leq0$.\\
+
+\begin{align}
+    ad\geq cb\\
+   \iff \frac{ad+ab}{bd+b^2}\geq \frac{cb+ab}{bd+b^2}\\
+   \iff \frac{a(d+b)}{(b+d)b}\geq \frac{(c+a)b}{b(b+d)}\\
+   \iff \frac{a}{b} \geq \frac{c+a}{b+d}
+\end{align}
+
+Sei $bd+d^2\leq0$
+
+\begin{align}
+    ad\geq cb\\
+   \iff \frac{ad+cd}{bd+d^2}\geq \frac{cb+cd}{bd+d^2}\\
+   \iff \frac{d(a+c)}{(b+d)d}\geq \frac{(b+d)c}{d(b+d)}\\
+   \iff \frac{a+c}{b+d} \geq \frac{c}{d}
+\end{align}
+   $\square$
+\\
+Es soll gezeigt werden, dass die Bedingung $ab>0$ auch eine hinreichende Bedingung fuer die Aussage
+$\frac{a}{b}<  \frac{c}{d}\implies \left( \frac{a}{b}< \frac{a+c}{b+d}< \frac{c}{d}\right)$ ist.
+
+Sei $ab>0$\\
+Sei $\frac{a}{b}=\frac{ad}{bd}>\frac{cb}{db}=\frac{c}{d}$\\
+Daraus folgt: 
+$ad<cb$\\\\
+
+Ausserdem gilt: \\
+$bd+d^2\>0 \land bd+b^2>0$\\
+Daraus folgt: 
+\begin{align}
+    ad< cb\\
+   \iff \frac{ad+ab}{bd+b^2}< \frac{cb+ab}{bd+b^2}\\
+   \iff \frac{a(d+b)}{(b+d)b}< \frac{(c+a)b}{b(b+d)}\\
+   \iff \frac{a}{b}< \frac{c+a}{b+d}
+\end{align}
+und 
+
+\begin{align}
+    ad< cb\\
+   \iff \frac{ad+cd}{bd+d^2}<\frac{cb+cd}{bd+d^2}\\
+   \iff \frac{d(a+c)}{(b+d)d}< \frac{(b+d)c}{d(b+d)}\\
+   \iff \frac{a+c}{b+d} < \frac{c}{d}
+\end{align}
+$\square$
+\end{document}
+
