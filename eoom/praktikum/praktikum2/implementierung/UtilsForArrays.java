@@ -1,6 +1,6 @@
 public  class UtilsForArrays{
     //Konstruktor 
-    public UtilsForArrays (){
+    public UtilsForArrays (int radius){
     }
 
     // Methoden
