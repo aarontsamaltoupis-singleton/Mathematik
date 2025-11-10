@@ -1,3 +1,4 @@
+
 \documentclass[a4paper,oneside,11pt]{article}
 \usepackage[utf8]{inputenc}
 
@@ -167,135 +168,22 @@
 
 \begin{document}
 
-\begin{center}
-	{\Large\bf Aufgaben für Analysis I} \\
-	\medskip
-	\textbf{\large Blatt NUMMER} \\
-	\bigskip
-	\textbf{IHRE NAME}
-\end{center}
-
-\bigskip
-\hrule
-\bigskip\bigskip
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Aufgabe 3.1}
-\subsection*{8)}
-$h_n=n^k\cdot x^n$, wobei $|x|<1$\\
-
-Es soll durch Induktion gezeigt werden, dass $\forall k\in\mathbb{N}:\exists N\in \mathbb{N}: x^n<\frac{1}{n^k},\forall n<N$.
-\subsubsection*{Induktionsanfang}
-Sei $n>k$, Sei $n$ so gewählt, dass $(\frac{n}{n+1})^k>x$.\\
-Sei $x^n>\frac{1}{n^k}$.\\
-Es gilt demnach:  $x^n=\frac{1}{n^k}+\varepsilon, \varepsilon \in\mathbb{N} $. Für größere n, kann $\varepsilon$ beliebig klein gewählt werden, da sowohl $x^n$, als auch $\frac{1}{n^k}$ gegen 0 konvergieren.\\
-\\
+\section*{Nr7}
 \begin{align}
-	x^{kn}= & (\frac{1}{n^k}+\varepsilon )^{k}                                    \\
-	        & =\sum^{k}_{i=0}\binom{k}{i}\frac{1}{n^{2k-i}}\cdot \varepsilon ^{i} \\
-	        & <\frac{1}{n^{2k}}                                                   \\
-	        & <\frac{1}{n^{k}\cdot k^k}                                           \\
-	        & =\frac{1}{(kn)^k }                                                  \\
+	g_n=\frac{n+1}{n^{n+\frac{1}{n}}}=\frac{n+1}{n^{n}\cdot n^{\frac{1}{n}}}<\frac{n+1}{n^n}<\frac{2n}{n^n}=\frac{2}{n^{n-1}}\leq \frac{2}{n}
 \end{align}
-Somit gilt $x^{nk}<\frac{1}{nk}$.
+Außerdem gilt $g_n>0$. Da $\frac{2}{n}$ ebenfalls gegen 0 konvergiert, folgt aus dem Sandwichsatz: $$
+\lim \limits_{n\to\infty}g_n = 0
+$$
 
 
-\subsubsection*{Induktionsschritt}
-Die Folge $(\frac{n}{n+1})$ konvergiert gegen 1.\\
-Somit konvergiert auch die folge $\frac{n}{n+1})^{k})$\\
-Sei also $n$ so gewählt, dass $(\frac{n}{n+1})^{k}>x$. Dies ist moeglich, da $x<1$.\\
-\textbf{Induktionshypothese:} Sei $x^n<\frac{1}{n^k}$.
+\section*{Nr 3}
 \begin{align}
-	x^{n+1} & = x\cdot x^n                                          \\
-	        & < (\frac{n}{n+1})^{k}\cdot x^n                        \\
-	        & \overset{IH}{<}(\frac{n}{n+1})^{k}\cdot \frac{1}{n^k} \\
-	        & = \frac{1}{(n+1)^k}
+	c_n< \frac{n}{\sqrt{n^2+1}}<\frac{n}{\sqrt{n^2}}\leq 1
 \end{align}
-\\\\
-Da gilt $x^n<\frac{1}{n^k	}$, gilt auch:
-$x^{n}\cdot n^{k-1}<\frac{1}{n}, \forall n<N$.\\
-Nach Beispielaufgabe $e7$ konvergiert $\frac{1}{n}$ gegen 0. Da $h(n)>0, \forall n\in\mathbb{N}$ konvergiert die Folge nach Satz 4.8 gegen 0.
-
-
-
-\newpage
-\section*{Aufgabe 3.2}
-
-Sei ein $\varepsilon<0$.\\
-Sei ein $n_0$ gewählt, sodass $|a-a_{n_0}|< \varepsilon $\\
-
-
-Sei ein k gewählt, sodass $\frac{\max\{a_1,\dots ,a_{n_0}, n_0\cdot a+n_0\cdot  \varepsilon\cdot  b\}}{kn_0}<\frac{\varepsilon -|a-a_{n_0}|}{2}$
-\\
-Sei $N>n_0\cdot k$
-
 \begin{align}
-	|\frac{a_1+\dots +a_n}{n}|= |\frac{a_1+\dots +a_{n_0}}{n}+\frac{a_{n_0+1}+\dots +a_{2n_0}}{n}|
+	c_n> \frac{n}{\sqrt{n^2+n}}>\frac{n}{\sqrt{n^2+2n+1}}>\frac{n}{\sqrt{(n+1)^2}}\geq \frac{n}{n+1}
 \end{align}
-\newpage
-\subsection*{Nr 3.4}
-sei $k_0 = k^2$\\
-Zu zeigen: $$k_0(1+1)^n>(1+q)^{n-1}+2(1+q)^{n-2}\dots +n$$
-$$\iff k> d_n = \frac{1}{k(1+q)}+\frac{2}{k(1+q)^2}+\dots +\frac{n}{k(1+q)^2}$$
-\\Sei $n_0$ so gewählt, dass $\frac{n_0}{k(q+1)^{n_0}}<\varepsilon $\\
-Dies ist möglich, da $\frac{n_0}{(q+1)^{n_0}}$ gegen 0 konvergiert.\\
-Es gibt somit eine Konstante $M$, sodass $$d_n=M  + \sum_{i=0}^{\infty}e_n$$, wobei 
-$$e_1<\varepsilon $$ und 
-$$e_{n+1} = \frac{e_{n}}{(q+1)k}+ \frac{e_n}{(q+1)k\cdot n_0} $$\\
-Sei k nun so gewählt, dass $k(q+1)>4$.
-Es gilt: 
-$e_n <  \frac{\varepsilon }{2^{n-1}} $\\
-**Beweis fehlt**
-\\
-Es gilt somit:
-$$
-\sum^{\infty}_{i=0} e_n < \sum^{\infty}_{i=0} \varepsilon \cdot \frac{1}{2^{n-1}} = m
-$$
+Nach dem Sandwichsatz folgt $\lim\limits_{n\to\infty}c_n=1$.
 
-Somit gilt: 
-$$
-d_n < M+m\\
-$$
-
-k kann beliebig größer gewählt werden, sodass gilt $k>d_n$.\\
-Die einzige Bedingung für k, dass $k(q+1)>4$ ist, bleibt dadurch bestehen.\\
-Somit kann $k$ so gewählt werden, dass 
-$$
-k>d_n \\
-\iff k^2 = k_0 >d_n \cdot {k}\\
-=
-
-$$
-\newpage
-\section{Lemma 1}
-
-
-\section*{Beweis}
-Es soll gezeigt werden, dass $a_n< (\frac{c}{c+\delta})^n$ ,für ein $\delta>0$. 
-Da geizeigt wurde, dass $(\frac{c}{c+\delta})^n$ gegen 0 konvergiert, konvergiert aufgrund des Sandwich Satzes auch $a_n$ gegen 0.
-
-Es gilt:$$
-$a_n<c^{\sum^{n-1}_{i=1}i(q+1)^{(n-i)}}\cdot A^{(q+1)^n}$
-$$
-
-Sei $A=\frac{1}{(c+\delta)^k}$.\\
-
-Nach Lemma 1 kann für $k$ ein Wert gewählt werden, sodass
-
-$$\sum^{n-1}_{i=1}i(q+1)^{(n-i)}< k(q+1)^n$$
-
-\\
-Somit gilt 
-$$
-a_n<c^{\sum^{n-1}_{i=1}i(q+1)^{(n-i)}}\cdot \frac{1}{k(1+q)^n}=\frac{c^f}{c+}
-
-$$
 \end{document}
-
-
-
-
-
-
-
