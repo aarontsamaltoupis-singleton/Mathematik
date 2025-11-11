@@ -1,7 +1,7 @@
 public class PythagoraeischeZahlentripel {
     int[] speicherArray;
     int[] speicherQuadrate;
-    int[] anzahlZahlentripel;
+    int anzahlZahlentripel;
 
 //Konstruktor
     public PythagoraeischeZahlentripel(int minimum, int maximum){
@@ -22,15 +22,19 @@ public class PythagoraeischeZahlentripel {
     }
 
     public void berechne (){
-        int differenz=1;
 
-        for (int index = 0;index<speicherQuadrate.length;++ index){
-            if(istQuadratzahl(differenz)==true && differenz>array[i]){
-
+        for (int indexj = 0;indexj<speicherQuadrate.length;++ indexj){
+            for (int indexi = 0;indexi<indexj;++ indexi){
+                int differenz=speicherQuadrate[indexj]-speicherQuadrate[indexi];
+                if(istQuadratzahl(differenz)==true && differenz>speicherQuadrate[indexi]){
+                    anzahlZahlentripel += 1;              
+                }
+            }
         }
+    }
 
-
-        }
+    public void gibtAnzahlAus(){
+        System.out.println(anzahlZahlentripel);
     }
 
 
