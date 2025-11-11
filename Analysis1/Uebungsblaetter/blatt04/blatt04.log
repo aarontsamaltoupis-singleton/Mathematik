@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.24)  10 NOV 2025 16:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.25)  10 NOV 2025 20:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -31,35 +31,19 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 Package: babel 2024/01/07 v24.1 The Babel package
 \babel@savecnt=\count195
 \U@D=\dimen141
-\l@unhyphenated=\language5
+\l@unhyphenated=\language89
  (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count196
-
-
-/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty:4291: Package babel Error: Unknown option 'ngerman'. Either you misspelled it
-(babel)                or the language definition file ngerman.ldf
-(babel)                was not found.
-(babel)                There is a locale ini file for this language.
-(babel)                If it’s the main language, try adding `provide=*'
-(babel)                to the babel package options.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4291 \ProcessOptions*
-                       
-Valid options are, among others: shorthands=, KeepShorthandsActive,
-activeacute, activegrave, noconfigs, safe=, main=, math=
-headfoot=, strings=, config=, hyphenmap=, or a language name.
-
-Package babel Info: You haven't specified a language as a class or package
-(babel)             option. I'll load 'nil'. Reported on input line 4342.
-(/usr/share/texlive/texmf-dist/tex/generic/babel/nil.ldf
-Language: nil 2024/01/07 v24.1 Nil language
-\l@nil=\language6
-)) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngerman.ldf
+Language: ngerman 2024/01/19 v2.14 German support for babel (post-1996 orthography)
+ (/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+Language: ngermanb 2024/01/19 v2.14 German support for babel (post-1996 orthography)
+Package babel Info: Making " an active character on input line 122.
+))) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.tex
+Package babel Info: Importing font and identification data for ngerman
+(babel)             from babel-de.ini. Reported on input line 11.
+) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
@@ -359,107 +343,95 @@ The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 [3]
-./blatt04.tex:279: Display math should end with $$.
+./blatt04.tex:288: Display math should end with $$.
 <to be read again> 
                    a
-l.279 $a
-        _n<c^{\sum^{n-1}_{i=1}i(q+1)^{(n-i)}}\cdot A^{(q+1)^n}$
+l.288 	$a
+         _n<c^{\sum^{n-1}_{i=1}i(q+1)^{(n-i)}}\cdot A^{(q+1)^n}$
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-./blatt04.tex:279: Missing $ inserted.
+./blatt04.tex:288: Missing $ inserted.
 <inserted text> 
                 $
-l.279 $a_
-         n<c^{\sum^{n-1}_{i=1}i(q+1)^{(n-i)}}\cdot A^{(q+1)^n}$
+l.288 	$a_
+          n<c^{\sum^{n-1}_{i=1}i(q+1)^{(n-i)}}\cdot A^{(q+1)^n}$
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./blatt04.tex:281: Missing $ inserted.
+./blatt04.tex:290: Missing $ inserted.
 <inserted text> 
                 $
-l.281 
+l.290 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./blatt04.tex:281: Display math should end with $$.
+./blatt04.tex:290: Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
-l.281 
+l.290 
       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
-
- []
-
-
-./blatt04.tex:289: LaTeX Error: There's no line here to end.
+./blatt04.tex:302: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.289 S
+l.302 S
        omit gilt
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./blatt04.tex:292: Missing $ inserted.
-<inserted text> 
-                $
-l.292 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+./blatt04.tex:304: Double superscript.
+<recently read> ^
+                 
+l.304 ...c{c^{c'}}{(c+\delta)^{a'}}<\frac{c^c'}{c}
+                                                  
+I treat `x^1^2' essentially like `x^1{}^2'.
 
-./blatt04.tex:292: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.292 
-      
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 313--317
 
-./blatt04.tex:294: Missing $ inserted.
-<inserted text> 
-                $
-l.294 \end{document}
-                    
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+ []
 
-./blatt04.tex:294: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.294 \end{document}
-                    
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
 
-[4] (./blatt04.aux)
+./blatt04.tex:321: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.321 S
+       ei A eine beliebige reelle Zahl,  sodass $A < \frac{1}{c^l}$.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[5] (./blatt04.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4987 strings out of 476182
- 76663 string characters out of 5795594
- 1938975 words of memory out of 5000000
- 26950 multiletter control sequences out of 15000+600000
+ 5095 strings out of 474222
+ 78971 string characters out of 5748732
+ 1939975 words of memory out of 5000000
+ 27302 multiletter control sequences out of 15000+600000
  564235 words of font info for 59 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
+ 1141 hyphenation exceptions out of 8191
  70i,10n,79p,275b,155s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on blatt04.pdf (4 pages, 152274 bytes).
+Output written on blatt04.pdf (5 pages, 157484 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 90 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

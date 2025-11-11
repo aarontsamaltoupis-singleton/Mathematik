@@ -185,25 +185,25 @@
 \subsection*{8)}
 $h_n=n^k\cdot x^n$, wobei $|x|<1$\\
 
-Es soll durch Induktion gezeigt werden, dass $\forall k\in\mathbb{N}:\exists N\in \mathbb{N}: x^n<\frac{1}{n^k},\forall n<N$.
+Es soll durch Induktion über n gezeigt werden, dass $\forall k\in\mathbb{N}:\exists N\in \mathbb{N}: x^n<\frac{1}{n^k},\forall n<N$.
 \subsubsection*{Induktionsanfang}
 Sei $n>k$, Sei $n$ so gewählt, dass $(\frac{n}{n+1})^k>x$.\\
-Sei $x^n>\frac{1}{n^k}$.\\
-Es gilt demnach:  $x^n=\frac{1}{n^k}+\varepsilon, \varepsilon \in\mathbb{N} $. Für größere n, kann $\varepsilon$ beliebig klein gewählt werden, da sowohl $x^n$, als auch $\frac{1}{n^k}$ gegen 0 konvergieren.\\
+Sei $x^n>\frac{1}{n^k}$. Es soll gezeigt werden, dass dann für ein späteres $k\cdot n$ die Ungleichung gilt.\\
+Es gilt demnach:  $x^n=\frac{1}{n^k}+\varepsilon, \varepsilon \in\mathbb{R} $. Für größere n, kann $\varepsilon$ beliebig klein gewählt werden, da sowohl $x^n$, als auch $\frac{1}{n^k}$ gegen 0 konvergieren.\\
 \\
 \begin{align}
 	x^{kn}= & (\frac{1}{n^k}+\varepsilon )^{k}                                    \\
 	        & =\sum^{k}_{i=0}\binom{k}{i}\frac{1}{n^{2k-i}}\cdot \varepsilon ^{i} \\
 	        & <\frac{1}{n^{2k}}                                                   \\
-	        & <\frac{1}{n^{k}\cdot k^k}                                           \\
-	        & =\frac{1}{(kn)^k }                                                  \\
+	        & <\frac{1}{n^{k}\cdot n^k}                                           \\
+	        & <\frac{1}{(kn)^k }                                                  \\
 \end{align}
-Somit gilt $x^{nk}<\frac{1}{nk}$.
+Somit gilt $x^{nk}<\frac{1}{nk}$ als Induktionsanfang. Es soll durch den Induktionsschritt gezeigt werden, dass die Ungleichung $x^m<\frac{1}{m}$ ab diesem Punkt für alle $m>nk$ gilt.
 
 
 \subsubsection*{Induktionsschritt}
 Die Folge $(\frac{n}{n+1})$ konvergiert gegen 1.\\
-Somit konvergiert auch die folge $\frac{n}{n+1})^{k})$\\
+Somit konvergiert auch die Folge $(\frac{n}{n+1})^{k}$\\
 Sei also $n$ so gewählt, dass $(\frac{n}{n+1})^{k}>x$. Dies ist moeglich, da $x<1$.\\
 \textbf{Induktionshypothese:} Sei $x^n<\frac{1}{n^k}$.
 \begin{align}
@@ -240,57 +240,91 @@ Zu zeigen: $$k_0(1+1)^n>(1+q)^{n-1}+2(1+q)^{n-2}\dots +n$$
 $$\iff k> d_n = \frac{1}{k(1+q)}+\frac{2}{k(1+q)^2}+\dots +\frac{n}{k(1+q)^2}$$
 \\Sei $n_0$ so gewählt, dass $\frac{n_0}{k(q+1)^{n_0}}<\varepsilon $\\
 Dies ist möglich, da $\frac{n_0}{(q+1)^{n_0}}$ gegen 0 konvergiert.\\
-Es gibt somit eine Konstante $M$, sodass $$d_n=M  + \sum_{i=0}^{\infty}e_n$$, wobei 
-$$e_1<\varepsilon $$ und 
+Es gibt somit eine Konstante $M$, sodass $$d_n=M  + \sum_{i=0}^{\infty}e_n$$, wobei
+$$e_1<\varepsilon $$ und
 $$e_{n+1} = \frac{e_{n}}{(q+1)k}+ \frac{e_n}{(q+1)k\cdot n_0} $$\\
 Sei k nun so gewählt, dass $k(q+1)>4$.
-Es gilt: 
+Es gilt:
 $e_n <  \frac{\varepsilon }{2^{n-1}} $\\
 **Beweis fehlt**
 \\
 Es gilt somit:
 $$
-\sum^{\infty}_{i=0} e_n < \sum^{\infty}_{i=0} \varepsilon \cdot \frac{1}{2^{n-1}} = m
+	\sum^{\infty}_{i=0} e_n < \sum^{\infty}_{i=0} \varepsilon \cdot \frac{1}{2^{n-1}} = m
 $$
 
-Somit gilt: 
+Somit gilt:
 $$
-d_n < M+m\\
+	d_n < M+m\\
 $$
 
 k kann beliebig größer gewählt werden, sodass gilt $k>d_n$.\\
 Die einzige Bedingung für k, dass $k(q+1)>4$ ist, bleibt dadurch bestehen.\\
-Somit kann $k$ so gewählt werden, dass 
+Somit kann $k$ so gewählt werden, dass
 $$
-k>d_n \\
-\iff k^2 = k_0 >d_n \cdot {k}\\
-=
+	k>d_n \\
+	\iff k^2 = k_0 >d_n \cdot {k}\\
+	=
 
 $$
 \newpage
 \section{Lemma 1}
+Sei k so gewählt, dass $k>\frac{1}{q-1}$.
+\begin{align}
+	e_1 = \frac{1}{q+1}                                                                                                          \\
+	\textnormal{Die Folge} S' = e_1+\frac{2e_1}{q+1}+\frac{2^2e_1}{(q+1)^2}+\dots \textnormal{konvergiert gegen } \frac{1}{q-1}. \\
+	\textnormal{Es gilt: }k>S'>S                                                                                                 \\
+	\textnormal{Somit gilt: } k(1+q)^n>(1+q)^{n-1}+2(1+q)^{n-2}+\dots +n
+\end{align}
+
+
 
 
 \section*{Beweis}
-Es soll gezeigt werden, dass $a_n< (\frac{c}{c+\delta})^n$ ,für ein $\delta>0$. 
+Es soll gezeigt werden, dass $a_n< (\frac{c}{c+\delta})^n$ ,für ein $\delta>0$.
 Da geizeigt wurde, dass $(\frac{c}{c+\delta})^n$ gegen 0 konvergiert, konvergiert aufgrund des Sandwich Satzes auch $a_n$ gegen 0.
 
-Es gilt:$$
-$a_n<c^{\sum^{n-1}_{i=1}i(q+1)^{(n-i)}}\cdot A^{(q+1)^n}$
+Es gilt nach Lemma1:$$
+	$a_n<c^{\sum^{n-1}_{i=1}i(q+1)^{(n-i)}}\cdot A^{(q+1)^n}$
 $$
 
 Sei $A=\frac{1}{(c+\delta)^k}$.\\
+Somit gilt: $$
+	a_n<\frac{c^{\sum^{n-1}_{i=1}i(q+1)^{(n-i)}}
+	}{(c+\delta)^{k(q+1)^n}}=\frac{c^{c'}}{(c+\delta)^{a'}}$$
 
-Nach Lemma 1 kann für $k$ ein Wert gewählt werden, sodass
+Nach Lemma 2 kann für $k$ ein Wert gewählt werden, sodass
 
-$$\sum^{n-1}_{i=1}i(q+1)^{(n-i)}< k(q+1)^n$$
+$$\sum^{n-1}_{i=1}i(q+1)^{(n-i)}< k(q+1)^n$$, also
+$$c'<a'$$
 
 \\
-Somit gilt 
+Somit gilt
 $$
-a_n<c^{\sum^{n-1}_{i=1}i(q+1)^{(n-i)}}\cdot \frac{1}{k(1+q)^n}=\frac{c^f}{c+}
+	a_n<\frac{c^{c'}}{(c+\delta)^{a'}}<\frac{c^c'}{c}
+$$
 
+\newpage
+\section*{Lemma1}
+Zu zeigen ist, dass die Folge $$c'_n = \sum^{}$$
+
+
+\section*{Beweis}
+$a_n<c^{c_n'}\cdot A^{(1+q)^n}$
+\\
+Nach Lemma 1 ist gezeigt, dass der Exponent von $c$ $c_n'$ gegen einen Wert $l$ konvergiert.
+\\
+
+
+
+\\
+Sei A eine beliebige reelle Zahl,  sodass $A < \frac{1}{c^l}$.
 $$
+	a_n<c^l\cdot A^{(1+q)^n}<\frac{c^l}{c^{l(1+q)^n}}\leq \frac{1}{c^{(1+q)^n}}< \frac{1}{c^n}
+$$
+Da $c>1$ konergiert $\frac{1}{c^n}$ gegen 0. Nach dem Sandwich Satz strebt $a_n$ somit gegen 0.\\
+Da A beliebig war, gilt dies für alle $a_n$, für die gilt $a_1<A$.
+
 \end{document}
 
 

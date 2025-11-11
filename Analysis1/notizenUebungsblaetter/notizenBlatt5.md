@@ -10,3 +10,8 @@ Inwieweit würde dies in konflikt mit der zweiten Bedinung stehen?
 
 Zu zeigen ist, dass wenn eine Teilfolge von a  gegen a konvergiert, dann ist limsup an = liminf an
 
+
+# Fakten
+Die Folge a ist beschränkt (beweis nötig)
+
+
