@@ -14,12 +14,23 @@ public class PythagoraeischeZahlentripel {
 
 //Methoden
     public boolean istQuadratzahl(int zahl){
-        
-        return false;
+        boolean returnvalue = false;
+        if (Math.sqrt(zahl)-Math.floor(Math.sqrt(zahl))<0.01){
+            returnvalue = true;
+        }
+        return returnvalue;
     }
 
     public void berechne (){
+        int differenz=1;
 
+        for (int index = 0;index<speicherQuadrate.length;++ index){
+            if(istQuadratzahl(differenz)==true && differenz>array[i]){
+
+        }
+
+
+        }
     }
 
 

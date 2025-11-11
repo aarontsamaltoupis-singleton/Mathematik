@@ -1,7 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        int[] array = new int[5];
-        array[1]=3;
-        UtilsForArrays.arrayInhaltAusgaben(UtilsForArrays.quadriere(array));
-    } 
+        PythagoraeischeZahlentripel pyth = new PythagoraeischeZahlentripel(1, 2);
+        System.out.println(pyth.istQuadratzahl(3));
+    }
 }
