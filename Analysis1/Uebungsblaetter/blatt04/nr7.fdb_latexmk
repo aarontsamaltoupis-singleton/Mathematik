@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1762788835.87192 "nr7.tex" "nr7.pdf" "nr7" 1762788837.67542 2
+["pdflatex"] 1762850402.83955 "nr7.tex" "nr7.pdf" "nr7" 1762850404.68756 2
   "/etc/texmf/web2c/texmf.cnf" 1761199146.21628 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -30,6 +30,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty" 1704662920 150008 7a05b0fdc0167c04e192003e780ab195 ""
   "/usr/share/texlive/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.tex" 1656274800 336 b80d4d282e518e78a8b5f9cc543e7f94 ""
@@ -68,8 +69,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1762184321.97364 5312232 f3296911be9cc021788f3f879cf0a47d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1761302769 6800786 8576986329d7b3d43634880ae9650b9c ""
-  "nr7.aux" 1762788837.44129 108 d76181cdaee5a061064369ef085b29fc "pdflatex"
-  "nr7.tex" 1762788834.64028 5250 d4ca08c1c23c4bef403f7aa2b07cbccd ""
+  "nr7.aux" 1762850404.41978 108 d76181cdaee5a061064369ef085b29fc "pdflatex"
+  "nr7.tex" 1762850402.21377 5779 245ea505a45a205e71a2d3c836d5e752 ""
   (generated)
   "nr7.aux"
   "nr7.log"

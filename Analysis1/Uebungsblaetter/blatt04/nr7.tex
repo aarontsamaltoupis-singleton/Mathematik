@@ -178,12 +178,22 @@ $$
 
 
 \section*{Nr 3}
+Es soll gezeigt werden, dass die Folge $\frac{n}{n+1}$ gegen 0 konvergiert.\\
+Da die Folge $\frac{1}{n}$ gegen 0 konvergiert, gilt für alle $\varepsilon > 0$,dass es ein $N\in\mathbb{N}$ gibt, sodass $\frac{1}{n}<\varepsilon $ für alle $n>N$.
+\begin{align}
+	\frac{1}{n}<\varepsilon \\
+	\frac{1}{n}+\frac{n}{n}<\varepsilon +1\\
+	\frac{1+n}{n}< 1+\varepsilon, \forall n>N\\
+	|\frac{1+n}{n}-1|<\varepsilon ,\forall n<N
+\end{align}
+Somit konvergiert die Folge gegen 1.
+
 \begin{align}
 	c_n< \frac{n}{\sqrt{n^2+1}}<\frac{n}{\sqrt{n^2}}\leq 1
 \end{align}
 \begin{align}
 	c_n> \frac{n}{\sqrt{n^2+n}}>\frac{n}{\sqrt{n^2+2n+1}}>\frac{n}{\sqrt{(n+1)^2}}\geq \frac{n}{n+1}
 \end{align}
-Nach dem Sandwichsatz folgt $\lim\limits_{n\to\infty}c_n=1$.
+Da wie gezeigt $\frac{n}{n+1}$ ebenfalls gegen 1 konvergiert, folgt nach dem Sandwichsatz $\lim\limits_{n\to\infty}c_n=1$
 
 \end{document}
