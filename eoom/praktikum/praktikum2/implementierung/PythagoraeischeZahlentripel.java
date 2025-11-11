@@ -15,7 +15,7 @@ public class PythagoraeischeZahlentripel {
 //Methoden
     public boolean istQuadratzahl(int zahl){
         boolean returnvalue = false;
-        if (Math.sqrt(zahl)-Math.floor(Math.sqrt(zahl))<0.01){
+        if (Math.sqrt(zahl)-Math.floor(Math.sqrt(zahl))<0.0001){
             returnvalue = true;
         }
         return returnvalue;
