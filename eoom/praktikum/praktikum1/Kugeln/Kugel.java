@@ -2,6 +2,9 @@ public class Kugel{
     private double radius;
     public final double PI=3.14;
 
+    public Kugel(){
+        radius = 1.0;
+    }
 
     public Kugel(double radius){
         this.radius=radius;
