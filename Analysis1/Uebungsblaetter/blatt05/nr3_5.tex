@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+
+\title{}
+\author{
+    Aaron Tsamaltoupis,
+    Matr.Nr.: 3762396\\
+}
+\date{\today}
+
+\newcommand{\ZZ}{\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}}}
+
+\begin{document}
+
+\maketitle
+\section*{Lemma1}
+Beweise, dass die Folge $a_n$ konvergiert.
+
+\section*{Beweis}
+Nach Lemma 1 konvergiert a gegen einen Wert b.
+Sei zum Zwecke des Widerspruches $a \neq b$.\\
+
+Sei ein $\varepsilon < \frac{b-a}{4}$.\\
+Es gibt demnach ein $M\in\mathbb{N} $, sodass $|b_{2n}-a|<\varepsilon , \forall n>M$.\\
+Da $b_n$ gegen $a$ konvergiert und $a_n$ gegen $b$ konvergiert, kann ein $N>M$ gewählt werden, sodass
+$$|b_{n}-a|<\frac{\varepsilon }{2} $$.\\
+und
+$$
+	|a_n-b|<\frac{\varepsilon }{2}, \forall n>N
+$$
+Somit gilt: \\
+$$
+	b_n>a-\frac{\varepsilon }{2}
+$$
+und
+$$
+	a_n>b-\frac{\varepsilon }{2}
+$$
+
+
+
+Es gilt:
+\begin{align}
+	|b_{2n}-a| =
+	 &  & \mid\frac{\sum^{2n}_{i=0}a_i}{2n}-a                \mid                                     \\
+	 &  & \geq \mid\frac{\sum^{n}_{i=0}a_i}{2n}+\frac{\sum^{n}_{i=0}a_{n+i}}{2n}|-|a|                 \\
+	 &  & >|\frac{a}{2}|+ \frac{n\cdot b}{2n}|-|\frac{\varepsilon }{4}|- |\frac{\varepsilon }{4}|-|a| \\
+\end{align}
+
+\newpage
+\section*{Lemma1}
+Zu zeigen ist, dass $a_n$ beschränkt ist.\\
+Da $b_n$ konvergiert, ist $b_n$ nach Satz 4.5 beschränkt.\\
+Es gilt: \\
+\begin{align}
+	\exists A: -A<b_n<A\in\mathbb{R} , \forall n\in\mathbb{N}             \\
+	n\cdot (-A)<\sum^n_{i=1}a_i<n\cdot A                                  \\
+	(n+1)\cdot (-A)<\sum^{n+1}_{i=1}a_i<(n+1)\cdot A                      \\
+	-A = (n+1)(-A)-n(-A) < \sum^{n+1}_{i=1}a_i-\sum^{n}_{i=1}a_i= a_{n+1} \\
+	A = (n+1)(A)-n(A) > \sum^{n+1}_{i=1}a_i-\sum^{n}_{i=1}a_i= a_{n+1}    \\
+\end{align}
+Somit gilt $-A<a_{n+1}<A, \forall n\in\mathbb{N} $ und $|a_n|$ ist beschränkt von $A$, bzw von $|a_1|$.
+
+\section*{Beweis}
+Da $a_n$ beschränkt ist, gibt es eine Teilfolge $d_n$ von $a_n$, die konvergiert.\\
+
+\\
+
+Es soll gezeigt werden, dass $a_n$ nur einen Häufungspunkt hat.\\
+Seien $(a_{d_k})_k$ und $(a_{e_k})_k$ Teilfolgen von $(a_n)_n$, wobei$(a_{d_k})_k$ gegen $d$  und $(a_{e_k})_k$ gegen $e$ konvergiert.\\
+
+Es seien alle Elemente $d_i$ der Folge $(a_{d_k})_k$ ausgewählt, für die gilt: \\
+$$\exists m,a_{e_k}: a_m\leq d_i\leq a_{2m}, a_m\leq a_{e_k} \leq a_{2m}$$\\
+Die Punkte $d_i$ bilden dabei eine Teilfolge von $a_n$, da $m$ beliebig groß gewählt werden kann.\\
+Da
+
+
+
+
+
+
+Die Menge aller Häufungspunkte von $a_n$ beträgt also 1.\\
+Somit konvergiert $a_n$. Speziell muss $a_n$ gegen $a$ konvergieren. Würde $a_n$ gegen einen Wert $b\neq a$ konvergieren, würde nach nr 3.2 auf Blatt 04 auch die Folge $b_n$ gegen diesen Wert konvergieren. Dies ist nicht der Fall.
+
+
+
+
+
+
+\end{document}
+
