@@ -1,0 +1,248 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+
+
+\title{Analysis Übung 3}
+\author{
+    Hannah Wollenberg,
+    Matr.Nr. : 3787664\\
+    Moritz Röttelbach, 
+    Matr.Nr. : 3772311\\
+    Aaron Tsamaltoupis,
+    Matr.Nr.: 3762396\\
+    Sofia Valter,
+    Matr.Nr. : 3765150
+}
+\date{\today}
+
+\newcommand{\ZZ}{\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}}}
+
+\begin{document}
+
+\maketitle
+
+\subsubsection*{Lemma 1.}
+\quad Sei $a_n$ die Folge definiert in $3.4$, 
+und seien $C > 1$, $q > 0$ und $A > 0$. Seien die Folgen $b_n, c_n$ definiert mit
+$b_n = (1+q)^{n-1}$ und $c_1 = 0, c_n = (n-1) + c_{n-1}(1+q)$ für alle $n > 1$.
+Dann gilt
+$$a_n < C^{c_n} A^{b_n}$$
+\textbf{Beweis:} \\
+Induktionsanfang $n = 1$:
+$$a_1 < A = C^{0} A^{1} = C^{c_1} A^{b_1}$$
+(IV) 
+\\\indent Sei $a_n < C^{c_n} A^{b_n}$ für ein $n \in \mathbb{N}$ \\
+(IS)
+\begin{align*}
+    a_{n+1} &\le C^n a_n^{1+q}\\
+            &< C^n (C^{c_n} A^{b_n})^{1+q}\\
+            &= C^{n + c_n(1+q)} A^{(1+q)^n}\\
+            &= C^{c_{n+1}} A^{b_{n+1}}
+\end{align*}
+\qed
+
+\subsubsection*{Lemma 2.}
+\quad Sei $q > 0$ und sei $c_n$ wie in Lemma 1 definiert.
+Dann gilt die explizite Formel
+$$c_n = \frac{(1+q)^n - 1 - nq}{q^2}$$
+\textbf{Beweis:}\\
+Induktionsanfang $n=1$
+$$\frac{1+q - 1 - q}{q^2} = 0 = c_1$$
+(IV)\\
+Sei 
+$$c_n = \frac{(1+q)^n - 1 - nq}{q^2}$$
+für ein $n \in \mathbb{N}$\\
+(IS)
+\begin{align*}
+    c_{n+1} &= n + c_n(1+q)\\
+            &= n + \frac{(1+q)^n - 1 - nq}{q^2}(1+q)\\
+            &= n + \frac{(1+q)^{n+1} - 1 - q - nq - nq^2}{q^2}\\
+            &= \frac{nq^2 + (1+q)^{n+1} - 1 - q - nq - nq^2}{q^2}\\
+            &= \frac{(1+q)^{n+1} - 1 - q - nq}{q^2}\\
+            &= \frac{(1+q)^{n+1} - 1 - q(n+1)}{q^2}
+\end{align*}
+\qed
+
+\subsubsection*{Lemma 3.}
+\quad Sei $q > 0$, $k \in \mathbb{N}$ mit $k > \frac{1+q}{q^2}$, und sei $b_n, c_n$ wie in Lemma 1 definiert.  
+Setze $b'_n := k b_n$. Dann gilt
+$$b'_n > c_n \quad \text{für alle } n \in \mathbb{N}.$$
+\textbf{Beweis:}
+\begin{align*}
+    q^2 b'_n &= k q^2 (1+q)^{n-1} \\
+             &> (1+q) (1+q)^{n-1} &(\text{da } k q^2 > 1+q)\\
+              &= (1+q)^n \\
+              &> (1+q)^n - 1 - nq k\
+              &= c_n q^2 &(\text{nach Lemma 2})
+\end{align*}
+Da $q^2 > 0$ folgt $b'_n > c_n$.\\
+\qed
+\subsection*{lemma 4.}
+$\ZZ \lim_{n\rightarrow\infty}a_n=a\Rightarrow \lim_{n\rightarrow\infty} \sqrt{a_n}=\sqrt{a}$ für jede konvergente reihe $a_n\geq0$ \\
+sei $ \varepsilon'=a\sqrt{\varepsilon}$ für beliebige $\varepsilon\in\mathbb{R}>0$\\
+$|\sqrt{a_n}-\sqrt{a}|=\frac{|a_n-a|}{|\sqrt{a_n}+\sqrt{a}|}\leq\frac{|a_n-a|}{\sqrt{a}}<\frac{\varepsilon'}{\sqrt{a}}=\varepsilon$ \\
+für alle $n>N$ mit $n>N\Rightarrow|a_n-a|<\varepsilon'$ \qed
+\section*{3.1}
+\subsubsection*{(1)}
+$\ZZ\lim_{n\rightarrow\infty}a_n=0$\\
+$$\frac{n^4+3n^2+2}{n^6+1}=\frac{1+\frac{3}{n^2}+\frac{2}{n^4}}{n^2+\frac{1}{n^4}}<\frac{6}{n^2}\leq6\frac{1}{n}\Rightarrow\lim_{n\rightarrow\infty}a_n=0$$\\
+(mit 4.1 (b3),4.6(ii) und Sandwich Theorem)\qed
+\subsubsection*{(2)}
+$\ZZ \lim_{n\rightarrow\infty}\sqrt{n+1}-\sqrt{n}=0$\\
+Es gilt: 
+$$\sqrt{n+1}-\sqrt{n}=\frac{(\sqrt{n+1}-\sqrt{n})(\sqrt{n+1}+\sqrt{n})}{\sqrt{n+1}+\sqrt{n}}=\frac{1}{\sqrt{n+1}+\sqrt{n}}$$\\
+Sei $\varepsilon > 0$ und sei $N\in\mathbb{N}$ mit $N>\frac{1}{\varepsilon^2}$    nach Archimedes\\
+Sei $n > N$ dann gilt: 
+$$\left|\frac{1}{\sqrt{n+1}+\sqrt{n}}-0\right|=\frac{1}{\sqrt{n+1}+\sqrt{n}}<\frac{1}{\sqrt {n}}<\frac{1}{\sqrt{N}}<\varepsilon $$ \qed
+\subsubsection*{3)}
+Es soll gezeigt werden, dass die Folge $\frac{n}{n+1}$ gegen 0 konvergiert.\\
+Da die Folge $\frac{1}{n}$ gegen 0 konvergiert, gilt für alle $\varepsilon > 0$,dass es ein $N\in\mathbb{N}$ gibt, sodass $\frac{1}{n}<\varepsilon $ für alle $n>N$.
+\begin{align}
+	\frac{1}{n}<\varepsilon \\
+	\frac{1}{n}+\frac{n}{n}<\varepsilon +1\\
+	\frac{1+n}{n}< 1+\varepsilon, \forall n>N\\
+	|\frac{1+n}{n}-1|<\varepsilon ,\forall n<N
+\end{align}
+Somit konvergiert die Folge gegen 1.
+
+\begin{align}
+	c_n< \frac{n}{\sqrt{n^2+1}}<\frac{n}{\sqrt{n^2}}\leq 1
+\end{align}
+\begin{align}
+	c_n> \frac{n}{\sqrt{n^2+n}}>\frac{n}{\sqrt{n^2+2n+1}}>\frac{n}{\sqrt{(n+1)^2}}\geq \frac{n}{n+1}
+\end{align}
+Da wie gezeigt $\frac{n}{n+1}$ ebenfalls gegen 1 konvergiert, folgt nach dem Sandwichsatz $\lim\limits_{n\to\infty}c_n=1$
+
+\subsubsection*{(4)}
+Da für alle $i \le n$ gilt $0 < \frac{i}{n} \le 1$ folgt
+\begin{align*}
+0 < d_n =\frac{n!}{n^n} = \prod_{i=1}^{n} \frac{i}{n} \le \frac{1}{n} 
+\end{align*}
+Somit gilt
+$$0 \le \lim d_n \le \lim \frac{1}{n} = 0$$
+\qed
+\subsubsection*{(5)}
+Da für alle $i \le n$ gilt $\sqrt{n+i} \le \sqrt{2n}$ was umgeformt $\frac{1}{\sqrt{n+i}} \ge \frac{1}{\sqrt{2n}}$ ist. 
+Somit gilt 
+\begin{align*}
+    e_n = \sum_{i=1}^n \frac{1}{\sqrt{n+1}} \ge \frac{n}{\sqrt{2n}} = \frac{\sqrt{n}}{\sqrt{2}}
+\end{align*}
+da $\sqrt{n}$ unbeschränkt ist ist auch 
+$\frac{\sqrt{n}}{\sqrt{2}}$ unbeschränkt somit folgt, dass $e_n$ unbeschränkt ist was bedeutet, dass $e_n$ nicht konvergiert
+(Kontraposition von Satz 4.5)
+\\ \qed
+\subsubsection*{(6)}
+$\ZZ \lim_{n\rightarrow\infty}f_n=0$\\
+$f_n'=\frac{n+3}{n^{1.5}+1}<\frac{n+3}{n^{1.5}}\leq\frac{1}{\sqrt{n}}+\frac{3}{n}$
+\\
+konvergiert gegen 0 da $\lim_{n\rightarrow\infty}\frac{1}{\sqrt{n}}=0$(gezeigt in 3.1 (2)) und $\lim_{n\rightarrow\infty}\frac{3}{n}=0$ \\also konvergiert nach Lemma 4 auch $f_n=
+\sqrt{f_n'}$ gegen 0\qed
+
+\subsubsection*{(7)}
+\begin{align}
+	g_n=\frac{n+1}{n^{n+\frac{1}{n}}}=\frac{n+1}{n^{n}\cdot n^{\frac{1}{n}}}<\frac{n+1}{n^n}<\frac{2n}{n^n}=\frac{2}{n^{n-1}}\leq \frac{2}{n}
+\end{align}
+Außerdem gilt $g_n>0$. Da $\frac{2}{n}$ ebenfalls gegen 0 konvergiert, folgt aus dem Sandwichsatz: $$
+\lim \limits_{n\to\infty}g_n = 0
+$$
+\qed
+
+
+\subsubsection*{(8)}
+Sei $y = \frac{1}{x}$ es gilt $|y| = |\frac{1}{x}| > 1$
+Sei $d := |y| - 1 > 0$
+es gilt 
+$$|y|^n = (1+d)^n = \sum_{i=0}^n {n \choose i} d^i \ge {n \choose 2} d^2 = \frac{(n-1)n}{2} d^2$$
+Daraus folgt 
+$|y|^{-n} \le \frac{2}{(n-1)n}(|y| - 1)^2$
+\\
+Induktionsanfang k = 1: \\
+Sei $\varepsilon > 0$ und Sei $N > \frac{2}{\varepsilon (|y| - 1)^2} + 1$.
+Sei $n > N$
+\begin{align*}
+\frac{n}{|y|^n} &\le \frac{2n}{(n-1)n}(|y| - 1)^2 \\
+&= \frac{2}{(n-1)}(|y| - 1)^{-2}\\
+&< \frac{2}{(N-1)}(|y| - 1)^{-2}\\
+&< \varepsilon(|y| -1)^2 (|y| - 1|)^{-2} = \varepsilon
+\end{align*}
+(IV)
+
+Sei für alle $y \in \mathbb{R}$ mit $|y| > 1$ wahr, dass für alle $k < m$ $\lim \frac{n^k}{|y|^n} = 0$
+\\
+(IS)
+Sei $|y| > 1$ dann gilt $\sqrt{|y|} > 1$ 
+damit haben wir 
+\begin{align*}
+\lim \frac{n^m}{|y|^n} &= \lim \frac{n^{m-1}}{\sqrt{|y|}^n} \lim \frac{n}{\sqrt{y}^n} \\
+&= 0  &\text{Nach (IV) da } \sqrt{|y|} > 1
+\end{align*}
+\qed
+
+\section*{3.2}
+$\ZZ \lim_{n\rightarrow \infty}b_n=a$\\
+%$\forall \varepsilon>0 \exists N\in \mathbb{N}:n>N\Rightarrow|a_n-a|<\varepsilon\\$
+Sei $\varepsilon > 0$ und $N \in \mathbb{N}$ sodass $|a_n - a| < \varepsilon$ für alle $n > N$. Sei $n > N$ dann gilt: 
+$$b_n =\sum_{i=1}^N\frac{a_i}{n} +\sum_{i=N+1}^n\frac{a_i}{n}$$\\
+$\lim_{n\rightarrow\infty}\sum_{i=1}^N\frac{a_i}{n}=0$ \indent (mit 4.1 (b3) und 4.6(ii))
+
+\begin{align*}
+\frac{(n-N-1)(a-\varepsilon)}{n}
+&<
+\sum_{i=N+1}^n\frac{a_i}{n} 
+&<
+\frac{(n-N-1)(a+\varepsilon)}{n}
+\\
+(a-\varepsilon)-\frac{(N+1)(a-\varepsilon)}{n}
+&<
+\sum_{i=N+1}^n\frac{a_i}{n}
+& <(a+\varepsilon)-\frac{(N+1)(a+\varepsilon)}{n}
+\end{align*}
+$$
+\lim_{n\rightarrow\infty} \left( (a-\varepsilon)-\frac{(N+1)(a-\varepsilon)}{n} \right) =a-\varepsilon(\text{mit 4.1 (b3) und 4.6(ii,iii)})(\text{andere Seite analog dazu)}
+$$
+$-\varepsilon<\lim_{n\rightarrow\infty}\sum_{i=N+1}^n\frac{a_i}{n}-a<\varepsilon\Rightarrow|\lim_{n\rightarrow\infty}\sum_{i=N+1}^n\frac{a_i}{n}-a|<\varepsilon$
+für beliebig kleine $\varepsilon>0$. also gilt $\lim_{n\rightarrow\infty}\sum_{i=N+1}^n\frac{a_i}{n}=a$.\\
+Somit gilt $\lim_{n\rightarrow\infty}b_n=0+a=a$
+\\ \qed
+\section*{3.3}
+Seien $A_1 \ge A_2 \dots \ge A_k > 0$ dann gilt 
+$$
+\left( \sum_{i=1}^k A_i^n\right)^{1/n} \geq (A_1^n)^{1/n} = A_1
+$$
+und 
+$$
+\left( \sum_{i=1}^k A_i^n\right)^{1/n} \leq (k A_1^n)^{1/n} = k^{1/n} A_1
+$$
+daraus folgt
+$$A_1 \le \lim \left( \sum_{i=1}^k A_i^n\right)^{1/n} \le \lim (k^{1/n} A_1) = (\lim k^{1/n}) A_1 \overset{B6}{=} A_1$$
+\qed
+
+
+\section*{3.4}
+Sei $C > 1, q > 0$ und sei $k > \frac{1+q}{q^2} > 0$ mit $k \in \mathbb{N}$ (Archimedes).
+Wir definieren die Folgen $b_n, c_n$ mit 
+$b_n := (1+q)^{n-1}$ und 
+$c_1 := 0, c_n := (n-1) + c_{n-1}(1+q)$.
+Nun sei $A := \left( \frac{1}{C + \delta} \right)^k$ mit $\delta > 0$
+und $b'_n := kb_n$. Dann gilt
+$$
+a_n \overset{\text{Lemma 1}}{<} C^{c_n} \left( \frac{1}{C + \delta} \right)^{kb_n} = C^{c_n} \left( \frac{1}{C + \delta} \right)^{b'_n}
+$$
+Nach Lemma 3 gilt $b'_n > c_n$. Daraus folgt
+\begin{align*}
+    a_n 
+    &< \frac{C^{c_n}}{(C + \delta)^{b'_n}} \\
+    &< \frac{C^{c_n}}{(C + \delta)^{c_n}}   &(\text{da } C + \delta > 1 \text{ und } b'_n > c_n)\\
+    &< \left( \frac{C}{C + \delta} \right)^{c_n} \\
+    &< \left( \frac{C}{C + \delta} \right)^{n-1}    &(\text{da } c_n \ge n-1 \text{ und } \frac{C}{C+\delta} < 1)
+\end{align*}
+damit gilt $0 \le \lim_{n \to \infty}  a_n \le \lim_{n \to \infty} \left( \frac{C}{C + \delta} \right)^{n-1} = 0$
+\\ \qed
+
+
+\end{document}
+
