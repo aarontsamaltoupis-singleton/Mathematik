@@ -1,6 +1,6 @@
 public  class UtilsForArrays{
     //Konstruktor 
-    public UtilsForArrays (int radius){
+    public UtilsForArrays (){
     }
 
     // Methoden
@@ -25,7 +25,7 @@ public  class UtilsForArrays{
 
     public static void arrayInhaltAusgaben (int[] eingabeArray){
         for (int index=0;index<eingabeArray.length; ++ index){
-            System.out.println(eingabeArray[index]);
+            System.out.println(eingabeArray[index]+"");
         }
     }
 }
