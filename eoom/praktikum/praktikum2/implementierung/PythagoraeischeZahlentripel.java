@@ -6,7 +6,6 @@ public class PythagoraeischeZahlentripel //extends UtilsForArrays
     private int minimum;
     private int maximum;
 
-//Konstruktor
     public PythagoraeischeZahlentripel(int minimum, int maximum){
         this.minimum = minimum;
         this.maximum =maximum;
@@ -18,11 +17,10 @@ public class PythagoraeischeZahlentripel //extends UtilsForArrays
     }
 
     public boolean istQuadratzahl(int zahl){
-        double pruefvariable = 0.0001;
         boolean returnvalue;
         double zahlSqareroot = Math.sqrt(zahl);
 
-        if (Math.abs((zahlSqareroot-Math.floor(zahlSqareroot)))<pruefvariable){
+        if (Math.abs((zahlSqareroot-Math.floor(zahlSqareroot)))<0.0001){
             returnvalue = true;
         }
         else{
@@ -32,7 +30,7 @@ public class PythagoraeischeZahlentripel //extends UtilsForArrays
         return returnvalue;
     }
 
-    public void berechne (){
+    private void berechne (){
         int differenz;
 
         for (int indexj = 0;indexj < speicherQuadrate.length;++ indexj){
@@ -47,7 +45,7 @@ public class PythagoraeischeZahlentripel //extends UtilsForArrays
     }
 
     public void gibtAnzahlAus(){
-        System.out.println(anzahlZahlentripel);
+        System.out.print(anzahlZahlentripel);
     }
 
     public int getMinimum(){

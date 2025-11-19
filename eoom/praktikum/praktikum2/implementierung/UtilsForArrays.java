@@ -1,9 +1,4 @@
 public  class UtilsForArrays{
-    //Konstruktor 
-    public UtilsForArrays (){
-    }
-
-    // Methoden
     public static int[] createIntArray (int minimum, int maximum){
 
         int[] arrayMinMax = new int[(maximum+1)- minimum];
@@ -25,7 +20,7 @@ public  class UtilsForArrays{
 
     public static void arrayInhaltAusgaben (int[] eingabeArray){
         for (int index=0;index<eingabeArray.length; ++ index){
-            System.out.println(eingabeArray[index]+"");
+            System.out.print(eingabeArray[index]+",");
         }
     }
 }
