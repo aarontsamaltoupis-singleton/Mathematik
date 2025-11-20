@@ -1,58 +1,39 @@
-public class PythagoraeischeZahlentripel //extends UtilsForArrays
-{
+public class PythagoraeischeZahlentripel extends UtilsForArrays{
     private int[] speicherArray;
     private int[] speicherQuadrate;
     private int anzahlZahlentripel;
-    private int minimum;
-    private int maximum;
 
     public PythagoraeischeZahlentripel(int minimum, int maximum){
-        this.minimum = minimum;
-        this.maximum =maximum;
+        speicherArray = createIntArray(minimum, maximum);
+        speicherQuadrate = quadriere(speicherArray);
+        arrayInhaltAusgeben(speicherQuadrate);
 
-        speicherArray = UtilsForArrays.createIntArray(minimum, maximum);
-        speicherQuadrate = UtilsForArrays.quadriere(speicherArray);
-        UtilsForArrays.arrayInhaltAusgaben(speicherQuadrate);
         berechne();
     }
 
     public boolean istQuadratzahl(int zahl){
-        boolean returnvalue;
-        double zahlSqareroot = Math.sqrt(zahl);
-
-        if (Math.abs((zahlSqareroot-Math.floor(zahlSqareroot)))<0.0001){
+        boolean returnvalue = false;
+        if (Math.sqrt(zahl)-Math.floor(Math.sqrt(zahl))<0.0001){
             returnvalue = true;
         }
-        else{
-            returnvalue=false;
-        }
-
         return returnvalue;
     }
 
     private void berechne (){
-        int differenz;
+        System.out.println("");
 
-        for (int indexj = 0;indexj < speicherQuadrate.length;++ indexj){
+        for (int indexj = 0;indexj<speicherQuadrate.length;++ indexj){
             for (int indexi = 0;indexi<indexj;++ indexi){
-                differenz=speicherQuadrate[indexj]-speicherQuadrate[indexi];
-
+                int differenz=speicherQuadrate[indexj]-speicherQuadrate[indexi];
                 if(istQuadratzahl(differenz)==true && differenz>speicherQuadrate[indexi]){
-                    anzahlZahlentripel += 1;              
+                    anzahlZahlentripel += 1;
+                    System.out.println(speicherArray[indexi]+"^2+"+Math.abs(Math.sqrt(differenz))+"^2="+speicherArray[indexj]+"^2");
                 }
             }
         }
     }
 
     public void gibtAnzahlAus(){
-        System.out.print(anzahlZahlentripel);
-    }
-
-    public int getMinimum(){
-        return minimum;
-    }
-
-    public int getMaximum(){
-       return maximum;
+        System.out.println(anzahlZahlentripel);
     }
 }

@@ -1,5 +1,5 @@
 public  class UtilsForArrays{
-    public static int[] createIntArray (int minimum, int maximum){
+    public int[] createIntArray (int minimum, int maximum){
 
         int[] arrayMinMax = new int[(maximum+1)- minimum];
         for (int index = 0;index<arrayMinMax.length;++ index){
@@ -8,7 +8,7 @@ public  class UtilsForArrays{
         return arrayMinMax;
     }
 
-    public static int[] quadriere (int[] eingabeArray){
+    public int[] quadriere (int[] eingabeArray){
         int[] quadrierterArray = new int[eingabeArray.length];
 
         for (int index = 0;index<quadrierterArray.length;++ index){
@@ -18,7 +18,7 @@ public  class UtilsForArrays{
         return quadrierterArray;
     }
 
-    public static void arrayInhaltAusgaben (int[] eingabeArray){
+    public void arrayInhaltAusgeben (int[] eingabeArray){
         for (int index=0;index<eingabeArray.length; ++ index){
             System.out.print(eingabeArray[index]+",");
         }
