@@ -1,13 +1,18 @@
-n = 100
+import math
+n= 10000000
 
-m = 0
-for k in range(1,n):
-	m += k(1/(k**2)-1/((k+1)**2))
+def a(n,m):
+    return (m**(1/n))
+def b(n):
+    return (1+1/n)
 
-m2 = 0
-for k in range(1,n):
-	m2 += 1/k**2
+def c(n):
+    returnvalue = (n*(n**(1/n))/(n+1))
+    for x in range(1,n+1):
+        returnvalue *= 1/(x**(1/n))
+    return returnvalue-1
+    
 
 
-	
+print(c(n))
 
