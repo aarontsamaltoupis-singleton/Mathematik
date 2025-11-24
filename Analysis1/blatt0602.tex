@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+
+
+\title{}
+\author{
+    Aaron Tsamaltoupis,
+    Matr.Nr.: 3762396\\
+}
+\date{\today}
+
+\newcommand{\ZZ}{\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}}}
+
+\begin{document}
+
+\maketitle
+\section*{Nr 3.3}
+$$
+	\sum^{\infty}_{n=1}n(a_n-a_{n+1}) =\lim \limits_{n\to\infty} \sum^{n}_{k=1}k(a_k-a_{k+1})
+$$
+Es gilt, dass $$
+	\sum_{k=1}^n k(a_k-a_{k+1}) = \sum^n_{k=1}a_k - n\cdot a_{n+1}
+$$
+Beweis durch Induktion:\\
+\textbf{Induktionsanfang}\\
+$$	\sum_{k=1}^1 k(a_k-a_{k+1}) =a_1 - a_{2}$$
+
+\textbf{Induktionsschritt}\\
+Induktionsbehauptung: $$
+	\sum_{k=1}^n k(a_k-a_{k+1}) = \sum^n_{k=1}a_k - n\cdot a_{n+1}
+$$
+\begin{align}
+	\sum_{k=1}^{n+1} k(a_k-a_{k+1}) &  &                                                 \\
+	=\sum_{k=1}^n k(a_k-a_{k+1})+(n+1)(a_{n+1}-a_{n+2})                                  \\
+	\overset{IB}{=} \sum^n_{k=1}a_k - n\cdot a_{n+1}+n\cdot a_{n+1}+a_{n+1}-(n+1)a_{n+2} \\
+	=\sum^{n+1}_{k=1}a_k - (n+1)\cdot a_{n+2}
+\end{align}
+
+
+
+\newpage
+
+Zu zeigen ist, dass die Folge $n\cdot a_{n+1}$ konvergiert.
+Sei sie konvergiert nicht. Nach dem Cauchy-Kriterium, können gibt es dann ein $\varepsilon >0 $ ,sodass für alle $N_0\in\mathbb{N} $ ein $m_0>n_0>N_0$ gefunden werden kann, sodass:
+$$
+	m_0\cdot a_{m_0+1}-n_0\cdot a_{n_0+1}>\varepsilon
+$$
+
+\begin{align}
+	m\cdot a_{m_0+1}> \varepsilon +n\cdot a_{n_0+1}             \\
+	a_{m+1} > \frac{\varepsilon }{m_0}+\frac{n_0}{m_0}a_{n_0+1} \\
+	a_{m+1}>\varepsilon \frac{a_{n_0+1}n_0}{m_0}
+\end{align}
+Es gilt:
+
+\begin{align}
+	\sum^\infty_n a_{n+1}> \varepsilon (\frac{a_{n_0+1}n_0}{m_0}+\frac{a_{n_1+1}n_1}{m_1}+\frac{a_{n_2+1}n_2}{m_2}+\dots)
+\end{align}
+
+Die Reihe $\sum_i\frac{a_{n_i+1}n_i}{m_i}$ konvergiert entweder, oder nicht.
+
+Da diese Reihe divergiert, divergiert die gesamte Reihe $\sum_n a_n$, was ein Widerspruch ist.
+
+\newpage
+Nach dem Cauchy Verdichtungskriterium konvergiert die Reihe $\sum^n 2^n\cdot a_{2^n}$.
+
+\\Die Folge $(2^n\cdot a_{2^n})_n$ ist also eine Nullfolge.\\
+
+$$
+	0<(2^{n+1}-1)a_{2^{n+1}}<2^{n+1}a_{2^{n+1}}
+$$
+
+\\
+Zu zeigen ist, dass die Folge $n\cdot a_{n+1}$ konvergiert.\\
+Das Cauchy-Kriterium gilt für die konvergente Teilfolge $((2^n-1)\cdot a_{2^n})_n$ von $(n\cdot a_{n+1})_n$.
+
+Nach dem Sandwich-Satz konvergiert die Folge $((2^{n+1}-1)a_{2^{n+1}})_n$ gegen 0.\\
+Da diese Folge eine Teilfolge der konvergenten Folge $(n\cdot a_{n+1})_n$ ist, muss die gesamte Folge gegen 0 konvergieren, da nach Bemerkung 4.16 alle Teilfolgen einer konvergenten Folge gegen den Grenzwert der Folge konvergieren.\\
+
+Es gilt: \\
+\begin{align}
+	\sum^{\infty}_{n=1}n(a_n-a_{n+1}) =\lim \limits_{n\to\infty} \sum^{n}_{k=1}k(a_k-a_{k+1}) \\
+	= \lim \limits_{n\to\infty} \sum^{n}_{k=1}a_k-\lim \limits_{n\to\infty}n\cdot a_{n+1}
+\end{align}
+Nach den Rechenregeln für konvergente Folgen gilt also:
+$$
+	\sum^{\infty}_{n=1}n(a_n-a_{n+1}) = \lim \limits_{n\to\infty} \sum^{n}_{k=1}a_k+0 =\sum^{\infty}_{n=1}a_n
+	\qed
+$$
+\end{document}
+
