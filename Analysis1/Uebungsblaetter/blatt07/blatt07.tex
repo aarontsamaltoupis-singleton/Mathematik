@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+
+
+\title{}
+\author{
+    Aaron Tsamaltoupis,
+    Matr.Nr.: 3762396\\
+}
+\date{\today}
+
+\newcommand{\ZZ}{\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}}}
+
+\begin{document}
+\maketitle
+\section*{3}
+\subsection*{2)}
+Es gilt:
+$$
+	e = \lim \limits_{k\to\infty}(1+\frac{1}{k})^k
+$$
+wobei die Folge $((1+\frac{1}{k})^k)_k$ monoton steigend ist.\\
+Es gilt $e> (1+\frac{1}{n})^n, \forall n\in\mathbb{N} $
+
+\begin{align}
+	\left(\frac{n+1}{n}\right)^{n+1}-e = &  &
+	\left(\frac{n+1}{n}\right)\left(\frac{n+1}{n}\right)^n-e                                                                        \\
+	                                     &  & < \left(\frac{n+1}{n}\right)\left(\frac{n+1}{n}\right)^n-\left(\frac{n+1}{n}\right)^n \\
+	                                     &  & =  \left(\frac{n+1}{n}\right)^n\left(1+\frac{1}{n} -1\right)                          \\
+	                                     &  & = \left(\frac{n+1}{n}\right)^n\cdot \frac{1}{n}                                       \\
+	                                     &  & = e\cdot \frac{1}{n}
+\end{align}
+Somit gilt:
+\begin{align}
+	\left(\left(\frac{n+1}{n}\right)^{n+1} - e\right)^2 \\
+	<(e\cdot \frac{1}{n})^2                             \\
+	\leq e^2\cdot \frac{1}{n^2}
+\end{align}
+$\sum_{=1}^{\infty} e^2 \cdot \frac{1}{n^2}$ omst somit eine Majorante der Reihe $\sum_n^\infty \left(\left(\frac{n+1}{n}\right)^{n+1}-e\right)^2
+$.\\
+Da $\sum^{\infty}_{n=1}\frac{1}{n^2}$ konvergiert, konvergiert nach den Rechenregeln für konvergente Folgen auch die Reihe $\sum_{n=1}^\infty e^2 \cdot  \frac{1}{n^2} = e^2 \cdot \sum_{n=1}^\infty \frac{1}{n^2}$.\\
+
+Nach dem Majorantenkriterium konvergiert damit auch die Reihe $$
+	\sum_n^\infty \left(\left(\frac{n+1}{n}\right)^{n+1}-e\right)^2
+$$
+\end{document}
+
