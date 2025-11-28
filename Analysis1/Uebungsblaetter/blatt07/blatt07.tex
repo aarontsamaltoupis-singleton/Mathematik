@@ -24,15 +24,15 @@ $$
 	e = \lim \limits_{k\to\infty}(1+\frac{1}{k})^k
 $$
 wobei die Folge $((1+\frac{1}{k})^k)_k$ monoton steigend ist.\\
-Es gilt $e> (1+\frac{1}{n})^n, \forall n\in\mathbb{N} $
+Es gilt $(1+\frac{1}{n})^{n+1}>e> (1+\frac{1}{n})^n, \forall n\in\mathbb{N} $
 
 \begin{align}
-	\left(\frac{n+1}{n}\right)^{n+1}-e = &  &
-	\left(\frac{n+1}{n}\right)\left(\frac{n+1}{n}\right)^n-e                                                                        \\
-	                                     &  & < \left(\frac{n+1}{n}\right)\left(\frac{n+1}{n}\right)^n-\left(\frac{n+1}{n}\right)^n \\
-	                                     &  & =  \left(\frac{n+1}{n}\right)^n\left(1+\frac{1}{n} -1\right)                          \\
-	                                     &  & = \left(\frac{n+1}{n}\right)^n\cdot \frac{1}{n}                                       \\
-	                                     &  & = e\cdot \frac{1}{n}
+	0<\left(\frac{n+1}{n}\right)^{n+1}-e = &  &
+	\left(\frac{n+1}{n}\right)\left(\frac{n+1}{n}\right)^n-e                                                                          \\
+	                                       &  & < \left(\frac{n+1}{n}\right)\left(\frac{n+1}{n}\right)^n-\left(\frac{n+1}{n}\right)^n \\
+	                                       &  & =  \left(\frac{n+1}{n}\right)^n\left(1+\frac{1}{n} -1\right)                          \\
+	                                       &  & = \left(\frac{n+1}{n}\right)^n\cdot \frac{1}{n}                                       \\
+	                                       &  & = e\cdot \frac{1}{n}
 \end{align}
 Somit gilt:
 \begin{align}
@@ -40,9 +40,9 @@ Somit gilt:
 	<(e\cdot \frac{1}{n})^2                             \\
 	\leq e^2\cdot \frac{1}{n^2}
 \end{align}
-$\sum_{=1}^{\infty} e^2 \cdot \frac{1}{n^2}$ omst somit eine Majorante der Reihe $\sum_n^\infty \left(\left(\frac{n+1}{n}\right)^{n+1}-e\right)^2
+$\sum\limits_{n=1}^{\infty} e^2 \cdot \frac{1}{n^2}$ ist somit eine Majorante der Reihe $\sum\limits_n^\infty \left(\left(\frac{n+1}{n}\right)^{n+1}-e\right)^2
 $.\\
-Da $\sum^{\infty}_{n=1}\frac{1}{n^2}$ konvergiert, konvergiert nach den Rechenregeln für konvergente Folgen auch die Reihe $\sum_{n=1}^\infty e^2 \cdot  \frac{1}{n^2} = e^2 \cdot \sum_{n=1}^\infty \frac{1}{n^2}$.\\
+Da $\sum\limits^{\infty}_{n=1}\frac{1}{n^2}$ konvergiert, konvergiert nach den Rechenregeln für konvergente Folgen auch die Reihe $\sum\limits_{n=1}^\infty e^2 \cdot  \frac{1}{n^2} = e^2 \cdot \sum\limits_{n=1}^\infty \frac{1}{n^2}$.\\
 
 Nach dem Majorantenkriterium konvergiert damit auch die Reihe $$
 	\sum_n^\infty \left(\left(\frac{n+1}{n}\right)^{n+1}-e\right)^2
