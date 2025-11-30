@@ -51,8 +51,8 @@ $$
 Es gilt:
 $$\{1,2,\dots ,m-(d+1)\}\subseteq \{\tau (1), \dots ,\tau (m)\}\subseteq \{1,\dots ,m+d\}, \forall m\in\mathbb{N} $$
 Da $(a_n)_n$ eine Nullfolge ist, kann ein N gewählt werden, sodass für alle $n>N$ gilt: $$a_n<\frac{\varepsilon}{4\cdot d} $$\\
-Nach dem Cauchy-Kriterium kann  ein $M\in\mathbb{N} $ gewählt werden, sodass $$\forall n>m>M:\sum_{k=n}^m a_k<\frac{\varepsilon}{2} $$.\\
-Sei $m>\max\{N,M\}$
+Nach dem Cauchy-Kriterium kann  ein $M\in\mathbb{N} $ gewählt werden, sodass $$\forall m>n>M:\sum_{k=n}^m a_k<\frac{\varepsilon}{2} $$.\\
+Sei $m>\max\{N,M\}+d$
 \begin{align}
 	\left|\sum_{n=1}^m a_{\tau (n)}-\sum^m_{n=1}a_n\right| &  &
 	= \left|\sum^{m-d-1}_{n=1}a_n\ +\sum^{m}_{n=m-d}a_{ \tau (n)}-\sum^m_{n=1}a_n\right|                                                     \\
