@@ -17,7 +17,7 @@
 
 \begin{document}
 \maketitle
-\section*{3}
+\section*{3.1}
 \subsection*{2)}
 Es gilt:
 $$
@@ -30,14 +30,14 @@ Es gilt $(1+\frac{1}{n})^{n+1}>e> (1+\frac{1}{n})^n, \forall n\in\mathbb{N} $
 	0<\left(\frac{n+1}{n}\right)^{n+1}-e = &  &
 	\left(\frac{n+1}{n}\right)\left(\frac{n+1}{n}\right)^n-e                                                                          \\
 	                                       &  & < \left(\frac{n+1}{n}\right)\left(\frac{n+1}{n}\right)^n-\left(\frac{n+1}{n}\right)^n \\
-	                                       &  & =  \left(\frac{n+1}{n}\right)^n\left(1+\frac{1}{n} -1\right)                          \\
+	%&  & =  \left(\frac{n+1}{n}\right)^n\left(1+\frac{1}{n} -1\right)                          \\
 	                                       &  & = \left(\frac{n+1}{n}\right)^n\cdot \frac{1}{n}                                       \\
 	                                       &  & = e\cdot \frac{1}{n}
 \end{align}
 Somit gilt:
 \begin{align}
 	\left(\left(\frac{n+1}{n}\right)^{n+1} - e\right)^2 \\
-	<(e\cdot \frac{1}{n})^2                             \\
+	%	<(e\cdot \frac{1}{n})^2                             \\
 	\leq e^2\cdot \frac{1}{n^2}
 \end{align}
 $\sum\limits_{n=1}^{\infty} e^2 \cdot \frac{1}{n^2}$ ist somit eine Majorante der Reihe $\sum\limits_n^\infty \left(\left(\frac{n+1}{n}\right)^{n+1}-e\right)^2
@@ -47,5 +47,19 @@ Da $\sum\limits^{\infty}_{n=1}\frac{1}{n^2}$ konvergiert, konvergiert nach den R
 Nach dem Majorantenkriterium konvergiert damit auch die Reihe $$
 	\sum_n^\infty \left(\left(\frac{n+1}{n}\right)^{n+1}-e\right)^2
 $$
+\section*{3.4}
+Es gilt:
+$$\{1,2,\dots ,m-(d+1)\}\subseteq \{\tau (1), \dots ,\tau (m)\}\subseteq \{1,\dots ,m+d\}, \forall m\in\mathbb{N} $$
+Da $(a_n)_n$ eine Nullfolge ist, kann ein N gewählt werden, sodass für alle $n>N$ gilt: $$a_n<\frac{\varepsilon}{4\cdot d} $$\\
+Nach dem Cauchy-Kriterium kann  ein $M\in\mathbb{N} $ gewählt werden, sodass $$\forall n>m>M:\sum_{k=n}^m a_k<\frac{\varepsilon}{2} $$.\\
+Sei $m>\max\{N,M\}$
+\begin{align}
+	\left|\sum_{n=1}^m a_{\tau (n)}-\sum^m_{n=1}a_n\right| &  &
+	= \left|\sum^{m-d-1}_{n=1}a_n\ +\sum^{m}_{n=m-d}a_{ \tau (n)}-\sum^m_{n=1}a_n\right|                                                     \\
+	                                                       &  & \leq \left|\sum^{m}_{n=m-d}a_n\ \right|+\sum^{m}_{n=m-d}|a_{ \tau (n)}|      \\
+	                                                       &  & \leq \left|\sum^{m}_{n=m-d}a_n\right| + \sum^{m+d}_{n=m-d} |a_n|             \\
+	                                                       &  & \leq \frac{\varepsilon }{2}+ 2d\cdot \frac{ \varepsilon}{4d}\leq \varepsilon
+\end{align}
+Da die Folgen einen beliebig kleinen Abstand haben, konvergieren sie zu dem selben Grenzwert.
 \end{document}
 
