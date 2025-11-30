@@ -1,3 +1,6 @@
-public class GeometrischesObjektException {
-
+public class GeometrischesObjektException extends Exception{
+    GeometrischesObjektException(){}
+    GeometrischesObjektException(String message){}
+    
 }
+
