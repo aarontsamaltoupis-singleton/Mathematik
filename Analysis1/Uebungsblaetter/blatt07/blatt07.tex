@@ -73,29 +73,30 @@ $$\sum_{n=0}^m C_n = \sum_{n=0}^m A_{m-n}B_n$$\\
 \subsubsection*{Beweis Lemma 1}
 \begin{align*}
 	C_m = & \sum^m_{n=0}\sum^n_{k=0}a_k\cdot b_{n-k} \\
-	      & = \sum_{n=0}^m b_n \sum_{k=n}^m a_{n-k}  \\
-	      & = \sum_{n=0}^m b_n \sum_{k=0}^{m-n} a_n  \\
+	%& = \sum_{n=0}^m b_n \sum_{k=n}^m a_{n-k}  \\
+	%& = \sum_{n=0}^m b_n \sum_{k=0}^{m-n} a_n  \\
 	      & = \sum_{n=0}^m b_n A_{m-n}
 \end{align*}\\
 Beweis durch Induktion, dass
-$$\sum_{n=0}^m \sum^n_{k=0}b_n A_{m-n}=
+$$\sum_{n=0}^m \sum^n_{k=0}b_k A_{n-k}=
 	\sum_{n=0}^m A_{m-n}B_n$$
 \textbf{Induktionsanfang}\\
 Sei $m=0$.
 $$\sum^0_{n=0}\sum^n_{k=0}b_nA_{0-n} = b_0A_0 = B_0A_0 = \sum_{n=0}^0 A_{0-n}B_n$$
 \textbf{Induktionsschritt}\\
 Induktionshypothese: Sei
-$$\sum_{n=0}^m \sum^n_{k=0}b_n A_{m-n}=
+$$\sum_{n=0}^m \sum^n_{k=0}b_k A_{n-k}=
 	\sum_{n=0}^m A_{m-n}B_n$$
 
 
 \begin{align*}
-	\sum^{m+1}_{n=0}\sum^n_{k=0}b_k A_{n-k} & =\sum^{m}_{n=0}\sum^n_{k=0}b_k A_{n-k}+\sum^{m+1}_{n=0}b_n A_{m-n}                                      \\
-	                                        & \overset{IH}{=}\sum_{n=0}^mA_{m-n} \sum^m_{n=0} A_{m-n}B_n+ b_0 A_{m+1} + \sum^{m+1}_{n=1}b_n A_{m+1-n} \\
-	                                        & = \sum^m _{n=0} A_{m-n} B_n + \sum^m_{n=0}b_{n+1}A_{m-n} +b_0 A_{m+1}                                   \\
-	                                        & =\sum^m_{n=0} A_{m-n}(B_{n+1})-A_0 B_{m+1} + A_0 B_{m+1} + b_0 A_{m+1}                                  \\
-	                                        & = \sum^{m-1}_{n=0} A_{m-n} B_{n+1} + A_0 B_{m+1}+b_0A_{m+1}                                             \\
-	                                        & = \sum^{m}_{n=1} A_{m+1-n} B_{n} + A_0 B_{m+1}+b_0A_{m+1}                                               \\
+	\sum^{m+1}_{n=0}\sum^n_{k=0}b_k A_{n-k} & =\sum^{m}_{n=0}\sum^n_{k=0}b_k A_{n-k}+\sum^{m+1}_{n=0}b_n A_{m+1-n}                \\
+	                                        & \overset{IH}{=}\sum_{n=0}^m A_{m-n}B_n+ b_0 A_{m+1} + \sum^{m+1}_{n=1}b_n A_{m+1-n} \\
+	                                        & = \sum^m _{n=0} A_{m-n} B_n + \sum^m_{n=0}b_{n+1}A_{m-n} +b_0 A_{m+1}               \\
+	                                        & = \sum^m _{n=0} A_{m-n} B_n + b_{n+1}A_{m-n} +b_0 A_{m+1}                           \\
+	                                        & =\sum^m_{n=0} A_{m-n}(B_{n+1})+(-A_0 B_{m+1} + A_0 B_{m+1}) + b_0 A_{m+1}           \\
+	                                        & = \sum^{m-1}_{n=0} A_{m-n} B_{n+1} + A_0 B_{m+1}+b_0A_{m+1}                         \\
+	                                        & = \sum^{m}_{n=1} A_{m+1-n} B_{n} + A_0 B_{m+1}+b_0A_{m+1}                           \\
 	                                        & = \sum^{m+1}_{n=0}A_{m+1-n}B_n
 \end{align*}
 
@@ -133,17 +134,17 @@ Es kann also für jedes $\varepsilon >0$ ein $M_1$ gefunden werden, sodass für 
 
 Also gilt für alle $m_2>m_1>M_1$:
 \begin{align*}
-	|(m_2-m_1)C_{m_2}-\sum^{m_1}_{n=m_1}C_n|<\varepsilon
+	|(m_2-m_1)C_{m_2}-\sum^{m_2}_{n=m_1}C_n|<\varepsilon
 \end{align*}
 
 \textbf{Hilfssatz3}\\
 Da die Folge $\frac{m+1}{m}$ gegen 1 konvergiert, kann ein $M_2$ gewählt werden, sodass\\ $\forall m>M_2: |1-\frac{m+1}{m}|< \frac{\varepsilon}{4\cdot AB}$
 \begin{align*}
-	|AB-\frac{m+1}{m}AB|=|AB(\frac{\varepsilon }{4AB})|\leq \frac{ \varepsilon}{4}
+	|AB-\frac{m+1}{m}AB|=|AB(1-\frac{m+1}{m})|\leq |AB(\frac{\varepsilon }{4AB})|\leq \frac{ \varepsilon}{4}
 \end{align*}\\
 \textbf{Hilfssatz4}\\
-Wenn $|F-G|<k $ und $|F'-F|<k' $, dann $|F'-G|<k+k'$
-$$k+k'>|F-G|+|F'-F|\geq |F-G+F'-F|=|F'-G|$$
+Wenn $|F+G|<k $ und $|F'-F|<k' $, dann $|F'+G|<k+k'$
+$$k+k'>|F+G|+|F'-F|\geq |F+G+F'-F|=|F'+G|$$
 \\\\
 Sei $M= \max \{M_0,M_1,M_2,3\}$.
 Für alle $m>M$ gilt dann:
