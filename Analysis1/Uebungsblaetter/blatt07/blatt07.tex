@@ -60,5 +60,104 @@ Sei $m>\max\{N,M\}+d$
 	                                                       & \leq \frac{\varepsilon }{2}+ 2d\cdot \frac{ \varepsilon}{4d}\leq \varepsilon
 \end{align*}
 Da die Folgen einen beliebig kleinen Abstand haben, konvergieren sie zu dem selben Grenzwert.
+
+\newpage
+\section*{3.5}
+Sei $C_n=\sum_{k=0}^nc_k$,
+$B_n=\sum_{k=0}^nb_k$,
+$A_n=\sum_{k=0}^na_k$\\
+
+\subsection*{Lemma 1}
+$$\sum_{n=0}^m C_n = \sum_{n=0}^m A_{m-n}B_n$$\\
+
+\subsubsection*{Beweis Lemma 1}
+\begin{align*}
+	C_m = & \sum^m_{n=0}\sum^n_{k=0}a_k\cdot b_{n-k} \\
+	      & = \sum_{n=0}^m b_n \sum_{k=n}^m a_{n-k}  \\
+	      & = \sum_{n=0}^m b_n \sum_{k=0}^{m-n} a_n  \\
+	      & = \sum_{n=0}^m b_n A_{m-n}
+\end{align*}\\
+Beweis durch Induktion, dass
+$$\sum_{n=0}^m \sum^n_{k=0}b_n A_{m-n}=
+	\sum_{n=0}^m A_{m-n}B_n$$
+\textbf{Induktionsanfang}\\
+Sei $m=0$.
+$$\sum^0_{n=0}\sum^n_{k=0}b_nA_{0-n} = b_0A_0 = B_0A_0 = \sum_{n=0}^0 A_{0-n}B_n$$
+\textbf{Induktionsschritt}\\
+Induktionshypothese: Sei
+$$\sum_{n=0}^m \sum^n_{k=0}b_n A_{m-n}=
+	\sum_{n=0}^m A_{m-n}B_n$$
+
+
+\begin{align*}
+	\sum^{m+1}_{n=0}\sum^n_{k=0}b_k A_{n-k} & =\sum^{m}_{n=0}\sum^n_{k=0}b_k A_{n-k}+\sum^{m+1}_{n=0}b_n A_{m-n}                                      \\
+	                                        & \overset{IH}{=}\sum_{n=0}^mA_{m-n} \sum^m_{n=0} A_{m-n}B_n+ b_0 A_{m+1} + \sum^{m+1}_{n=1}b_n A_{m+1-n} \\
+	                                        & = \sum^m _{n=0} A_{m-n} B_n + \sum^m_{n=0}b_{n+1}A_{m-n} +b_0 A_{m+1}                                   \\
+	                                        & =\sum^m_{n=0} A_{m-n}(B_{n+1})-A_0 B_{m+1} + A_0 B_{m+1} + b_0 A_{m+1}                                  \\
+	                                        & = \sum^{m-1}_{n=0} A_{m-n} B_{n+1} + A_0 B_{m+1}+b_0A_{m+1}                                             \\
+	                                        & = \sum^{m}_{n=1} A_{m+1-n} B_{n} + A_0 B_{m+1}+b_0A_{m+1}                                               \\
+	                                        & = \sum^{m+1}_{n=0}A_{m+1-n}B_n
+\end{align*}
+
+Da $C_m = \sum_{n=0}^m b_nA_{m-n}$,  gilt
+$$
+	\sum_{n=0}^m C_m = \sum_{n=0}^m b_n A_{m-n}\qed
+$$
+\subsection*{Lemma 2}
+Aus $d_n\to e, e_n \to e$ folgt:
+$$
+	\frac{1}{n+1}\sum_{k=0}^n d_{n-k}e_k\to de
+$$
+- leider kein Beweis
+\subsubsection*{Hilfssatz1}\\
+Sei ein $\varepsilon >0$
+Nach Lemma 2 kann ein $M_0$ gefunden werden, sodass $\forall m > M_0:$
+\begin{align}
+	|\frac{1}{m+1}\sum_{n=0}^m A_{m-n}B_n-AB|<\frac{\varepsilon }{4}                \\
+	(m+1)\cdot |\frac{1}{m+1}\sum_{n=0}^m A_{m-n}B_n-AB|<(m+1)\frac{\varepsilon}{4} \\
+	|\sum_{n=0}^m A_{m-n}B_n-(m+1)AB|<(m+1)\frac{\varepsilon}{4}                    \\
+\end{align}
+Nach Lemma 1 gilt:
+$$
+	|\sum^m_{n=0}C_n-(m+1)AB|<(m+1)\varepsilon                         \\
+$$
+Speziell gilt außerdem:
+$$
+	|\sum^{2m}_{n=0}C_n-(2m+1)AB|<(2m+1)\varepsilon                         \\
+$$
+\\
+\\
+\textbf{Hilfssatz2}\\
+$C_n$ konvergiert gegen einen Grenzwert $C$.\\
+Es kann also für jedes $\varepsilon >0$ ein $M_1$ gefunden werden, sodass für alle $m_1>M_1$ gilt $|C-C_{m_1}|<\varepsilon$
+
+Also gilt für alle $m_2>m_1>M_1$:
+\begin{align*}
+	|(m_2-m_1)C_{m_2}-\sum^{m_1}_{n=m_1}C_n|<\varepsilon
+\end{align*}
+
+\textbf{Hilfssatz3}\\
+Da die Folge $\frac{m+1}{m}$ gegen 1 konvergiert, kann ein $M_2$ gewählt werden, sodass\\ $\forall m>M_2: |1-\frac{m+1}{m}|< \frac{\varepsilon}{4\cdot AB}$
+\begin{align*}
+	|AB-\frac{m+1}{m}AB|=|AB(\frac{\varepsilon }{4AB})|\leq \frac{ \varepsilon}{4}
+\end{align*}\\
+\textbf{Hilfssatz4}\\
+Wenn $|F-G|<k $ und $|F'-F|<k $, dann $|F'-G|<2k$
+$$2k>|F-G|+|F'-F|\geq |F-G+F'-F|=|F'-G|$$
+\\\\
+Sei $M= \max \{M_0,M_1,M_2,3\}$.
+Für alle $m>M$ gilt dann:
+\begin{align*}
+	\text{Nach Hilfssatz1: }                                                                               \\
+	 & |\sum^{2m}_{n=0}C_n-(2m+1)AB|                                                                       \\
+	 & = |\sum^{m-1}_{n=0}C_n+\sum_{n=m}^{2m}C_n-(2m+1)AB|<(2m+1)\frac{\varepsilon }{4}                    \\
+	 & \textnormal{Nach Hilfssatz 1 und 2:}                                                                \\
+	 & |m\cdot AB + mC_m - (2m+1) AB |<(2m+3) \frac{\varepsilon }{4}                                       \\
+	 & \implies |mC_m - (m+1) AB |<(2m+3) \frac{\varepsilon }{4}                                           \\
+	 & \implies |C_m -\frac{m+1}{m}AB| <(2+\frac{3}{m})\frac{\varepsilon }{4}                              \\
+	 & \textnormal{Nach Hilfssatz 3:}                                                                      \\
+	 & |C_m - AB|< (3+\frac{3}{m})\frac{\varepsilon }{4}\leq 4\cdot \frac{\varepsilon }{4}\leq \varepsilon
+\end{align*}
+Somit konvergiert $C_m$ gegen $AB$, was zu zeigen war.
 \end{document}
 
