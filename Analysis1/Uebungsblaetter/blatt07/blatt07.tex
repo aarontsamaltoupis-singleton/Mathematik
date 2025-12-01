@@ -142,8 +142,8 @@ Da die Folge $\frac{m+1}{m}$ gegen 1 konvergiert, kann ein $M_2$ gewählt werden
 	|AB-\frac{m+1}{m}AB|=|AB(\frac{\varepsilon }{4AB})|\leq \frac{ \varepsilon}{4}
 \end{align*}\\
 \textbf{Hilfssatz4}\\
-Wenn $|F-G|<k $ und $|F'-F|<k $, dann $|F'-G|<2k$
-$$2k>|F-G|+|F'-F|\geq |F-G+F'-F|=|F'-G|$$
+Wenn $|F-G|<k $ und $|F'-F|<k' $, dann $|F'-G|<k+k'$
+$$k+k'>|F-G|+|F'-F|\geq |F-G+F'-F|=|F'-G|$$
 \\\\
 Sei $M= \max \{M_0,M_1,M_2,3\}$.
 Für alle $m>M$ gilt dann:
@@ -151,11 +151,11 @@ Für alle $m>M$ gilt dann:
 	\text{Nach Hilfssatz1: }                                                                               \\
 	 & |\sum^{2m}_{n=0}C_n-(2m+1)AB|                                                                       \\
 	 & = |\sum^{m-1}_{n=0}C_n+\sum_{n=m}^{2m}C_n-(2m+1)AB|<(2m+1)\frac{\varepsilon }{4}                    \\
-	 & \textnormal{Nach Hilfssatz 1 und 2:}                                                                \\
+	 & \textnormal{Nach Hilfssatz 1, 2 und 4:}                                                             \\
 	 & |m\cdot AB + mC_m - (2m+1) AB |<(2m+3) \frac{\varepsilon }{4}                                       \\
 	 & \implies |mC_m - (m+1) AB |<(2m+3) \frac{\varepsilon }{4}                                           \\
 	 & \implies |C_m -\frac{m+1}{m}AB| <(2+\frac{3}{m})\frac{\varepsilon }{4}                              \\
-	 & \textnormal{Nach Hilfssatz 3:}                                                                      \\
+	 & \textnormal{Nach Hilfssatz 3 und 4:}                                                                \\
 	 & |C_m - AB|< (3+\frac{3}{m})\frac{\varepsilon }{4}\leq 4\cdot \frac{\varepsilon }{4}\leq \varepsilon
 \end{align*}
 Somit konvergiert $C_m$ gegen $AB$, was zu zeigen war.
