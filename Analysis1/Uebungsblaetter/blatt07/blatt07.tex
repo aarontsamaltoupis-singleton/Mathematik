@@ -71,12 +71,25 @@ $A_n=\sum_{k=0}^na_k$\\
 $$\sum_{n=0}^m C_n = \sum_{n=0}^m A_{m-n}B_n$$\\
 
 \subsubsection*{Beweis Lemma 1}
+\textbf{Hilfssatz 0}\\
+Zu zeigen: $$
+	C_m = & \sum^m_{n=0}b_n A_{m-n}\\$$
+Beweis durch Induktion:\\
+Induktionsanfang: $$C_0 = \sum^0_{n=0}c_n = a_0b_0 = \sum^0_{n=0}b_0A_0$$
+Induktionsschritt:\\
+Sei:
+$C_m = & \sum^m_{n=0}b_nA_{m-n}$ \\
 \begin{align*}
-	C_m = & \sum^m_{n=0}\sum^n_{k=0}a_k\cdot b_{n-k} \\
+	C_{m+1}=        & \sum^{m+1}_{n=0}\sum^n_{k=0}a_kb_{n-k}                                  \\
+	=               & \sum^{m}_{n=0}\sum_{k=0}^n a_kb_{n-k}+\sum_{n=0}^{m+1}a_{m+1-n} b_{n}   \\
+	\overset{IH}{=} & \sum^m_{n=0} b_nA_{m-n} + a_{m+1-n}b_n + a_{0} b_{m+1}                  \\
+	                & \sum^m_{n=0} b_nA_{m+1-n}+a_{0}b_{m+1}= \sum^{m+1}_{n=0}b_nA_{m+1} \qed
+	%C_m = & \sum^m_{n=0}\sum^n_{k=0}a_k\cdot b_{n-k} \\
 	%& = \sum_{n=0}^m b_n \sum_{k=n}^m a_{n-k}  \\
 	%& = \sum_{n=0}^m b_n \sum_{k=0}^{m-n} a_n  \\
-	      & = \sum_{n=0}^m b_n A_{m-n}
+	%      & = \sum_{n=0}^m b_n A_{m-n}
 \end{align*}\\
+\textbf{Beweis Lemma1}\\
 Beweis durch Induktion, dass
 $$\sum_{n=0}^m \sum^n_{k=0}b_k A_{n-k}=
 	\sum_{n=0}^m A_{m-n}B_n$$
@@ -100,7 +113,7 @@ $$\sum_{n=0}^m \sum^n_{k=0}b_k A_{n-k}=
 	                                        & = \sum^{m+1}_{n=0}A_{m+1-n}B_n
 \end{align*}
 
-Da $C_m = \sum_{n=0}^m b_nA_{m-n}$,  gilt
+Da nach Hilfssatz 0 $C_m = \sum_{n=0}^m b_nA_{m-n}$,  gilt
 $$
 	\sum_{n=0}^m C_m = \sum_{n=0}^m b_n A_{m-n}\qed
 $$
