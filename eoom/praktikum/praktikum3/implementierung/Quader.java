@@ -1,7 +1,7 @@
 public class Quader implements GeometrischesObjekt{
-    double laenge;
-    double breite;
-    double hoehe;
+    private double laenge;
+    private double breite;
+    private double hoehe;
     Quader(double laenge, double breite, double hoehe)throws GeometrischesObjektException{
         if (laenge < 0){
             throw new GeometrischesObjektException("Quader: Parameter Laenge <0; Wert: "+laenge);

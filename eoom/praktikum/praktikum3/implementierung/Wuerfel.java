@@ -1,5 +1,6 @@
 public class Wuerfel implements GeometrischesObjekt{
     private double seitenlaenge;
+
     Wuerfel(float seitenlaenge) throws GeometrischesObjektException{
         if (seitenlaenge<0){
             throw new GeometrischesObjektException("Wuerfel:Parameter Seitenlaenge <0; Wert: "+seitenlaenge);
