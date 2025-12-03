@@ -1,13 +1,17 @@
 import java.util.ArrayList;
+import java.util.List;
 
-public class GeometrischeObjekte {
-    ArrayList<GeometrischesObjekt> geometrischeObjekte = new ArrayList<>();
-    GeometrischeObjekte(){
+public class GeometrischeObjekte{
+    private List<GeometrischesObjekt> geometrischeObjekte;
 
+    public GeometrischeObjekte(){
+        geometrischeObjekte= new ArrayList<>();
     }
-    public void add(GeometrischeObjekt neuesElement){
+
+    public void add(GeometrischesObjekt neuesElement){
         geometrischeObjekte.add(neuesElement);
     }
+
     public double berechneGesamtesVolumen(){
         double summe=0;
         for(GeometrischesObjekt objekt:geometrischeObjekte){
@@ -34,7 +38,7 @@ public class GeometrischeObjekte {
         System.out.println(getAnzahl()
         +"gesamte Oberflaeche:" +berecheGesamteOberflaeche()
         +"gesamtes Volumen: "+berechneGesamtesVolumen());
-    }
+        }
     }
     
 

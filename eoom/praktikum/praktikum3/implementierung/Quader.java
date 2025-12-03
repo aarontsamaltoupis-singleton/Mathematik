@@ -27,10 +27,23 @@ public class Quader implements GeometrischesObjekt{
     public double getVolumen(){
         return(hoehe*laenge*breite);
     }
-    //@Override
-    //public String toString(){
-   //     return
-    //}
-
-    
+    public double getLaenge(){
+        return(laenge);
+    }
+    public double getBreite(){
+        return(breite);
+    }
+    public double getHoehe(){
+        return(hoehe);
+    }
+    @Override
+    public String toString(){
+        String daten = "Quader mit ";
+        daten += "Länge = "+ getLaenge();
+        daten += "Breite = "+ getBreite();
+        daten += "Höhe = "+ getHoehe();
+        daten += "Volumen = "+ getVolumen();
+        daten += "Oberfläche = "+ getOberflaeche();
+        return daten;
+    }
 }

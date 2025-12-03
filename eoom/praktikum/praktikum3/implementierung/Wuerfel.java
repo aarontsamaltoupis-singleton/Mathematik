@@ -25,9 +25,10 @@ public class Wuerfel implements GeometrischesObjekt{
 
     @Override
     public String toString(){
-        String daten="";
-        daten += "hi";
-        return daten.toString();
+        String daten="Würfel mit";
+        daten += "Seitenlänge = " +getSeitenlaenge();
+        daten += "Volumen = " +getVolumen();
+        daten += "Oberflaeche = " +getOberflaeche();
+        return daten;
     }
-
 }
