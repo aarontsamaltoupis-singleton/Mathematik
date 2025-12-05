@@ -7,10 +7,10 @@ public class Quader implements GeometrischesObjekt{
             throw new GeometrischesObjektException("Quader: Parameter Laenge <0; Wert: "+laenge);
         }
         else if (breite< 0){
-            throw new GeometrischesObjektException("Quader: Parameter Laenge <0; Wert: "+breite);
+            throw new GeometrischesObjektException("Quader: Parameter Breite <0; Wert: "+breite);
         }
         else if (hoehe< 0){
-            throw new GeometrischesObjektException("Quader: Parameter Laenge <0; Wert: "+hoehe);
+            throw new GeometrischesObjektException("Quader: Parameter Hoehe <0; Wert: "+hoehe);
             }
 
         else{
@@ -39,10 +39,10 @@ public class Quader implements GeometrischesObjekt{
     @Override
     public String toString(){
         String daten = "Quader mit ";
-        daten += "Länge = "+ getLaenge();
-        daten += "Breite = "+ getBreite();
-        daten += "Höhe = "+ getHoehe();
-        daten += "Volumen = "+ getVolumen();
+        daten += "Länge = "+ getLaenge()+", ";
+        daten += "Breite = "+ getBreite()+", ";
+        daten += "Höhe = "+ getHoehe()+", ";
+        daten += "Volumen = "+ getVolumen()+", ";
         daten += "Oberfläche = "+ getOberflaeche();
         return daten;
     }

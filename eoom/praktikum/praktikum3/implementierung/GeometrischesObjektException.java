@@ -1,6 +1,6 @@
 public class GeometrischesObjektException extends Exception{
     GeometrischesObjektException(){}
     GeometrischesObjektException(String message){
-        super(message);
+        super("Geometrisches Objekt: "+message);
     }
 }

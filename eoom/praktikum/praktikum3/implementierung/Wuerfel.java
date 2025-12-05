@@ -1,7 +1,7 @@
 public class Wuerfel implements GeometrischesObjekt{
     private double seitenlaenge;
 
-    Wuerfel(float seitenlaenge) throws GeometrischesObjektException{
+    Wuerfel(double seitenlaenge) throws GeometrischesObjektException{
         if (seitenlaenge<0){
             throw new GeometrischesObjektException("Wuerfel:Parameter Seitenlaenge <0; Wert: "+seitenlaenge);
             
@@ -22,12 +22,11 @@ public class Wuerfel implements GeometrischesObjekt{
     public double getOberflaeche(){
         return seitenlaenge*seitenlaenge;
     }
-
     @Override
     public String toString(){
-        String daten="Würfel mit";
-        daten += "Seitenlänge = " +getSeitenlaenge();
-        daten += "Volumen = " +getVolumen();
+        String daten="Würfel mit ";
+        daten += "Seitenlänge = " +getSeitenlaenge()+", ";
+        daten += "Volumen = " +getVolumen()+", ";
         daten += "Oberflaeche = " +getOberflaeche();
         return daten;
     }

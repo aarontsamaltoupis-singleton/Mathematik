@@ -1,11 +1,10 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class GeometrischeObjekte{
-    private List<GeometrischesObjekt> geometrischeObjekte;
+    private ArrayList<GeometrischesObjekt> geometrischeObjekte;
 
     public GeometrischeObjekte(){
-        geometrischeObjekte= new ArrayList<>();
+        this.geometrischeObjekte= new ArrayList<>();
     }
 
     public void add(GeometrischesObjekt neuesElement){
@@ -28,16 +27,16 @@ public class GeometrischeObjekte{
         return summe;
     }
 
-    public int getAnzahl(){
+    private int getAnzahl(){
         return geometrischeObjekte.size(); 
     }
     public void ausgeben(){
         for(GeometrischesObjekt objekt:geometrischeObjekte){
             System.out.println(objekt);
         }
-        System.out.println(getAnzahl()
-        +"gesamte Oberflaeche:" +berecheGesamteOberflaeche()
-        +"gesamtes Volumen: "+berechneGesamtesVolumen());
+        System.out.println("Anzahl der gespeicherten geometrischen Objekte: "+getAnzahl());
+        System.out.println("gesamte Oberflaeche: " +berecheGesamteOberflaeche());
+        System.out.println("gesamtes Volumen: "+berechneGesamtesVolumen());
         }
     }
     
