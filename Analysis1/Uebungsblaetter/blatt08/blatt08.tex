@@ -180,22 +180,37 @@ Nach der Definition des Limes superior gilt:
 	         & \exists N: \forall m>N: a_{m}<c-\varepsilon \\
 	\implies & |a_{m}-c|>\varepsilon, \forall m>N
 \end{align*}
-Somit kann es keinen Häufungspunkt $c> \limsup a_{n}$ geben.\\
+Keine Teilfolge von $(a_{n})$ kann somit gegen ein $c>\limsup a_{n}$ konvergieren und es kann keinen Häufungspunkt $c> \limsup a_{n}$ geben.\\
 
 $\limsup a_{n}$ ist also eine obere Schranke von $H$.\\
-Die Folge $(\sup \{a_{m}:m\geq n\})_{n}$ konvergiert per Definition gegen den Wert $\limsup_{a_{n}}$. Somit gilt $\limsup a_{n}\in H$.\\
-$\limsup_{a_{n}}$ ist somit das Maximum von $H$ und somit auch das Supremum.
+Wie im Beweis zum Satz von Bolzano-Weierstrass gezeigt, gilt für beschränkte Folgen, dass es eine Teilfolge $k(n)$ von $(a_{n})_{n}$ gibt, sodass:
+\begin{align*}
+	|a_{k(n+1)}-b_{k_{n}+1}|<\frac{1}{n} \\
+	b_{k(n-1)}-\frac{1}{n}\leq a_{k(n)}\leq b_{k(n)}
+\end{align*}
+Wobei $b_{n}=\sup \{a_{m}: m\geq n\}$ und $\lim \limits_{n\to\infty}^{""}b_{n}=\limsup a_{n}$\\
+Nach dem Sandwichsatz konvergiert $a_{k(n)}$ gegen $\limsup a_{n}$.\\
+$\limsup a_{n}$ ist somit ein Häufungspunkt und das Supremum von $H$.
 \subsection*{2}
 
-Nach Lemma 4.20 ist $b$ genau dann ein Häufungspunkt, wenn sich in  $B_{\varepsilon }(b)$ unendlich viele Elemente von $(a_{n})_n$ befinden.\\
+Nach Lemma 4.20 ist $b$ genau dann ein Häufungspunkt, wenn sich für alle $\varepsilon >0$ in  $B_{\varepsilon }(b)$ unendlich viele Elemente von $(a_{n})_n$ befinden.\\
 Sei ein $\varepsilon >0$ gewählt.
 Im $\frac{\varepsilon}{2} -$Ball um $b$ befinden sich unendlich viele Häufungspunkte $b_{n}$.\\
-Sei der Häufungspunkt $b_{n_{0}}$ mit dem kleinsten Abstand zu $b$ ausgewählt. Im $\frac{\varepsilon }{2}$- Ball um $b_{n_{0}}$ befinden sich unendlich viele Elemente.\\
+Sei der Häufungspunkt $b_{n_{0}}\in B_{\frac{\varepsilon }{2}}(b)$ mit dem kleinsten Abstand zu $b$ ausgewählt. Im $\frac{\varepsilon }{2}$- Ball um $b_{n_{0}}$ befinden sich unendlich viele Elemente der Folge $(a_{n})_{n}$.\\
+
+Es gilt:\\
+\begin{align*}
+	 & b_{n_{0}}\in B_{\frac{\varepsilon }{2}}(b)                                                                             \\
+	 & b-\frac{\varepsilon }{2}< b_{n_{0}}< b+\frac{\varepsilon }{2}                                                          \\
+	 & b-\varepsilon < b_{n_{0}}- \frac{\varepsilon }{2}<b_{n_{0}}+\frac{\varepsilon }{2}<b+{\varepsilon }                    \\
+	 & x\in (b_{n_{0}}-\frac{\varepsilon }{2}, b_{n_{0}}+\frac{\varepsilon }{2})\implies x\in (a-\varepsilon ,a+\varepsilon ) \\
+	 & B_{\frac{\varepsilon }{2}}(b_{n_{0}})\subseteq B_{\varepsilon }(b)
+\end{align*}
 Da $B_{\frac{\varepsilon }{2}}(b_{n_{0}})\subseteq B_{{\varepsilon }}(b)$ befinden sich auch in  $B_{\varepsilon }(b)$ unendlich viele Elemente $a_{k}$ der Folge $(a_{n})_{n}$ und $b$ ist ein Häufungspunkt.
 
 \section*{3.3}
 1) Die Reihe $\sum_{n=1}^{\infty} \frac{x^{n}}{n!}$ konvergiert für alle $x\in \mathbb{R}$.\\
-Somit konvergiert auch die Reihe $\sum_{n=1}^{\infty}\frac{(2x)^{n}}{n!}$.
+Somit konvergiert auch die Reihe $\sum_{n=1}^{\infty}\frac{(2x)^{n}}{n!}=\sum_{n=1}^{\infty}\left(\frac{2n}{n!}\right)x^{n}$.
 \bigskip
 
 
@@ -203,8 +218,8 @@ Somit konvergiert auch die Reihe $\sum_{n=1}^{\infty}\frac{(2x)^{n}}{n!}$.
 Die Folge $\left(\frac{1}{\sqrt[n]{n}}\right)^{2}$ konvergiert nach den Rechenregeln für konvergente Folgen gegen 1, da $\sqrt[n]{n}$ gegen 1 konvergiert.\\
 Somit gilt:
 \begin{align*}
-\limsup \left(\frac{1}{\sqrt[n]{n}}\right)^{2}=1\\
-\limsup \sqrt[n]{\frac{2n}{n^{2}}}=2
+	\limsup \left(\frac{1}{\sqrt[n]{n}}\right)^{2}=1 \\
+	\limsup \sqrt[n]{\frac{2n}{n^{2}}}=2
 \end{align*}
 Nach Cauchy-Hardamard gilt: $$
 	R= \frac{1}{2}
@@ -214,14 +229,117 @@ $$
 
 3)
 $$
-\sqrt[n]{n^{k}}=n^{\frac{k}{n}}=\left(\sqrt[n]{n}\right)^{k}
+	\sqrt[n]{n^{k}}=n^{\frac{k}{n}}=\left(\sqrt[n]{n}\right)^{k}
 $$
 
 Da $k$ ein konkretes Element der natürlichen Zahlen gilt
 \begin{align*}
-\lim \limits_{n\to\infty}^{""}\left(\sqrt[n]{n}\right)^{k}= \lim \limits_{n\to \infty}^{""}\sqrt[n]{n}=1\\
-\limsup \sqrt[n]{n^{k}}=1\\
-\textnormal{Nach Cauchy-Hadamard: }R = 1
+	\lim \limits_{n\to\infty}^{""}\left(\sqrt[n]{n}\right)^{k}= \lim \limits_{n\to \infty}^{""}\sqrt[n]{n}=1 \\
+	\limsup \sqrt[n]{n^{k}}=1                                                                                \\
+	\textnormal{Nach Cauchy-Hadamard: }R = 1
 \end{align*}
 
+\subsection*{4}
+Sei $x\geq \theta >\sqrt{3}$.
+\begin{align*}
+	 & \limsup \sqrt[n]{3^{-n}\cdot n^{3}\cdot x^{2n}}      \\
+	 & = \limsup 3^{-1}\cdot n^{\frac{1}{n}}^{3}\cdot x^{2} \\
+	 & = \frac{1}{3}x^{2}                                   \\
+	 & > \frac{1}{3}\theta^{2}>1
+\end{align*}
+
+Sei $x\leq \theta <\sqrt{3}$.
+\begin{align*}
+	 & \limsup \sqrt[n]{3^{-n}\cdot n^{3}\cdot x^{2n}}      \\
+	 & = \limsup 3^{-1}\cdot n^{\frac{1}{n}}^{3}\cdot x^{2} \\
+	 & = \frac{1}{3}x^{2}                                   \\
+	 & > \frac{1}{3}\theta^{2}>1
+\end{align*}
+
+\section*{3.4}
+Sei $(b_{n})_{n}$ eine Teilfolge von $a_{n}$, sodass $b_{n}\neq 0$.\\
+Es gilt: $\sum_{n=0}^{\infty}a_{n}=\sum_{n=0}^{\infty}b_{n}$
+\begin{align*}
+	 & |b_{n}|\geq 1              \\
+	%&\sqrt[n]{b_{n}}\geq 1\\
+	%&\sqrt[n]{b_{n}}\cdot x^{n}\geq x^{n}\\
+	 & b_{n}\cdot x^{n}\geq x^{n}
+\end{align*}
+
+Sei $x>1$.\\
+$x^{n}$ ist keine Nullfolge, daher divergiert $\sum_{n=0}^{\infty}b_{n}x^{n}=\sum_{n=0}^{\infty}a_{n}x^{n}$
+\section*{3.5}
+\subsection*{Lemma 1}
+Zu zeigen: Sei $\phi: \mathbb{N} \to A$ eine surjektive Abbildung. Es existiert dann eine Bijektion $\varphi: M\to A$, wobei $M=\{1,\dots ,N\}, N\in\mathbb{N} $ oder $M=\mathbb{N} $
+\bigskip
+
+Behauptung 1: \\
+Zu zeigen ist, dass es eine Teilmenge $B\subseteq \mathbb{N}$, sodass es eine Bijektion $f: A\to B$ gibt.
+\\Sei $f(a)= \min \{x\in \mathbb{N} : \phi (x)=a\}$
+\bigskip
+
+Behauptung 2: \\
+Zu zeigen ist, dass es für jedes $B\subseteq \mathbb{N} $ entweder die Funktion $g:\{1,\dots ,N\}\to B$ eine Bijektion für ein $N\in \mathbb{N} $ ist, oder  die Funktion $g:\mathbb{N} \to B$ eine Bijektion ist.\\
+Sei
+\begin{align*}
+	g(1) = \min \{B\} \\
+	g(n+1) = \min \{B \backslash \{ g(\{1,\dots ,n\})\}\}
+\end{align*}
+Wenn B endlich, dann ist $\max \{B\}$ definiert und es gibt ein $N\in \mathbb{N} $, sodass $$
+	g(N) = \min \{B\backslash g (\{1,\dots ,N-1\})\}= \max \{B\}
+$$
+$g:\{1,\dots ,N\}\to B$ ist dann dann bijektiv.\\
+\bigskip
+
+Sei $B$ hat nicht endlich viele Elemente. Zeige, dass $g: \mathbb{N} \to B$ injektiv und surjektiv.\medskip
+
+Injektiv:  
+\begin{align*}
+	&\textnormal{Sei } n\neq m ,\textnormal{O.b.d.A }m>n\\
+	& g(m)\in B \backslash \{g(\{1,\dots ,m-1\})\}\subseteq B\backslash \{g(n)\}\\ 
+	& \implies g(m) \neq g(n)
+\end{align*}
+Surjektiv: 
+\begin{align*}
+	&\textnormal{Sei } b\in B \textnormal{. $b$ ist größer als $n<b$ Elemente aus $B$.}\\
+	&b = g(n)
+\end{align*}
+
+Es gibt somit entweder eine Bijektion $\varphi = f\circ g: \{1,\dots ,N\}\to A$, oder eine Bijektion $\varphi = f \circ g: \mathbb{N} \to A$.
+\subsection*{Lemma 2}
+Die Abbildung $\psi: \mathbb{N}_0\times \mathbb{N}_0 \to \mathbb{Q}$ mit
+\begin{align*}\psi(i,j)=
+	\begin{cases}
+		\frac{k}{j+1}, \textnormal{falls } i =2k, k\in \mathbb{N  } _{0} \\
+		- \frac{k}{j+1}\textnormal{falls } i =2k+1, k\in \mathbb{N} _{0}
+	\end{cases}
+\end{align*}
+ist surjektiv.
+
+Sei $q\in \mathbb{Q} $.\\
+Sei $q\geq 0$
+\begin{align}
+	 & q = \frac{n}{m}, n,m\in \mathbb{N}_{0} \\
+	 & \textnormal{Sei } i=2n                 \\
+	 & \textnormal{Sei } j=m-1
+\end{align}
+Sei $q<0$
+Beweis analog.
+
+\subsection*{Lemma 3}
+Wie im Beweis zum Cauchy-Produkt gezeigt, gibt es eine Abzählung $\phi: \mathbb{N} _{0}\to \mathbb{N}_{0} \times  \mathbb{N}_{0}$
+
+
+\subsection*{Beweis 3.5}
+Nach Lemma 2 ist $\psi$ surjektiv, jedes $q\in \mathbb{Q} $ wird von einem $(i,j)\in \mathbb{N} _{0}\times  \mathbb{N} _{0}$ getroffen.
+Jedes $(i,j)\in \mathbb{N} _{0}\times \mathbb{N} _{0}$ wird von einem $n\in \mathbb{N}$ getroffen.\\
+Demnach wird jedes $q\in \mathbb{Q} $ von der Komposition $\psi \circ \phi: \mathbb{N} \to \mathbb{Q} $ getroffen, somit ist $\psi \circ \phi$ surjektiv.
+\bigskip
+
+Nach Lemma 1 gibt es somit eine Bijektion $\varphi :M \to \mathbb{Q}$, wobei $M=\{1,\dots ,N\}$, oder $M=\mathbb{N} $.
+\bigskip
+
+%Da $\{1,\dots ,N+1\}\subseteq \mathbb{Q} , \forall N\in \mathbb{N}$, kann es n
+Da es keine Bijektion zwischen einer endlichen und einer unendlichen Menge geben kann, muss gelten $M=\mathbb{N} $. Somit gibt es eine Bijektion zwischen $\mathbb{Q}$ und $\mathbb{N} $. \qed
+\\
 \end{document}
