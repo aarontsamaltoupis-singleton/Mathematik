@@ -192,4 +192,36 @@ Sei ein $\varepsilon >0$ gewählt.
 Im $\frac{\varepsilon}{2} -$Ball um $b$ befinden sich unendlich viele Häufungspunkte $b_{n}$.\\
 Sei der Häufungspunkt $b_{n_{0}}$ mit dem kleinsten Abstand zu $b$ ausgewählt. Im $\frac{\varepsilon }{2}$- Ball um $b_{n_{0}}$ befinden sich unendlich viele Elemente.\\
 Da $B_{\frac{\varepsilon }{2}}(b_{n_{0}})\subseteq B_{{\varepsilon }}(b)$ befinden sich auch in  $B_{\varepsilon }(b)$ unendlich viele Elemente $a_{k}$ der Folge $(a_{n})_{n}$ und $b$ ist ein Häufungspunkt.
+
+\section*{3.3}
+1) Die Reihe $\sum_{n=1}^{\infty} \frac{x^{n}}{n!}$ konvergiert für alle $x\in \mathbb{R}$.\\
+Somit konvergiert auch die Reihe $\sum_{n=1}^{\infty}\frac{(2x)^{n}}{n!}$.
+\bigskip
+
+
+2) $$\sqrt[n]{\frac{2^{n}}{n^{2}}}=2\cdot \left(\frac{1}{\sqrt[n]{n}}\right)^{2}$$
+Die Folge $\left(\frac{1}{\sqrt[n]{n}}\right)^{2}$ konvergiert nach den Rechenregeln für konvergente Folgen gegen 1, da $\sqrt[n]{n}$ gegen 1 konvergiert.\\
+Somit gilt:
+\begin{align*}
+\limsup \left(\frac{1}{\sqrt[n]{n}}\right)^{2}=1\\
+\limsup \sqrt[n]{\frac{2n}{n^{2}}}=2
+\end{align*}
+Nach Cauchy-Hardamard gilt: $$
+	R= \frac{1}{2}
+$$
+\bigskip
+
+
+3)
+$$
+\sqrt[n]{n^{k}}=n^{\frac{k}{n}}=\left(\sqrt[n]{n}\right)^{k}
+$$
+
+Da $k$ ein konkretes Element der natürlichen Zahlen gilt
+\begin{align*}
+\lim \limits_{n\to\infty}^{""}\left(\sqrt[n]{n}\right)^{k}= \lim \limits_{n\to \infty}^{""}\sqrt[n]{n}=1\\
+\limsup \sqrt[n]{n^{k}}=1\\
+\textnormal{Nach Cauchy-Hadamard: }R = 1
+\end{align*}
+
 \end{document}
