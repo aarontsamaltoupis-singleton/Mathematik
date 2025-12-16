@@ -25,12 +25,13 @@ public class BinarySearchTreeNode{
     }
     public int getHeight(){
         if (linkesKind == null& rechtesKind == null){
-            return 0;
+            return 0;//wenn  beide Kinder nicht existieren ist die Hoehe null. 
         }
         else{
             if (linkesKind==null){return rechtesKind.getHeight();}
             else if (rechtesKind==null){return linkesKind.getHeight();}
-            else if(linkesKind.getHeight()<rechtesKind.getHeight()){
+            else if(linkesKind.getHeight()<rechtesKind.getHeight()){ //grundsaetzich sollen einfach die laengste hoehe der beiden Kinder ausgewaehlt 
+                //werden, es muss aber der fall betrachtet werden, wenn eines der beiden Kinder nciht existsiert. 
                 return rechtesKind.getHeight()+1;}
                 else{
                     return linkesKind.getHeight()+1;

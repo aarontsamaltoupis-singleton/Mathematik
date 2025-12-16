@@ -1,0 +1,304 @@
+\documentclass[a4paper,oneside,11pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[ngerman]{babel} % For correct hyphenation
+
+\usepackage{mathtools}
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[mathscr]{eucal}
+
+\usepackage[textwidth=17cm,top=1.5cm,bottom=1.5cm,nohead]{geometry}
+
+\setlength{\parindent}{0mm} % no paragraph indentation
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Abbreviations
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% single letters in different fonts 
+
+%%%%%%%%%%%% mathematical bold  %%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bH}{\mathbb{H}}
+\newcommand{\bI}{\mathbb{I}}
+\newcommand{\bJ}{\mathbb{J}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bL}{\mathbb{L}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bS}{\mathbb{S}}
+\newcommand{\bT}{\mathbb{T}}
+\newcommand{\bU}{\mathbb{U}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bW}{\mathbb{W}}
+\newcommand{\bX}{\mathbb{X}}
+\newcommand{\bY}{\mathbb{Y}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+
+%%%%%%%%% calligraphic %%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\mc}[1]{\mathcal{#1}}
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+
+%%%%%%%%%%%%% mathematical fraktur  %%%%%%%%%%%%%%%%%%%%%
+\newcommand{\mf}[1]{\mathfrak{#1}}
+
+\newcommand{\fA}{\mathfrak{A}}
+\newcommand{\fB}{\mathfrak{B}}
+\newcommand{\fC}{\mathfrak{C}}
+\newcommand{\fD}{\mathfrak{D}}
+\newcommand{\fE}{\mathfrak{E}}
+\newcommand{\fF}{\mathfrak{F}}
+\newcommand{\fG}{\mathfrak{G}}
+\newcommand{\fH}{\mathfrak{H}}
+\newcommand{\fI}{\mathfrak{I}}
+\newcommand{\fJ}{\mathfrak{J}}
+\newcommand{\fK}{\mathfrak{K}}
+\newcommand{\fL}{\mathfrak{L}}
+\newcommand{\fM}{\mathfrak{M}}
+\newcommand{\fN}{\mathfrak{N}}
+\newcommand{\fO}{\mathfrak{O}}
+\newcommand{\fP}{\mathfrak{P}}
+\newcommand{\fQ}{\mathfrak{Q}}
+\newcommand{\fR}{\mathfrak{R}}
+\newcommand{\fS}{\mathfrak{S}}
+\newcommand{\fT}{\mathfrak{T}}
+\newcommand{\fU}{\mathfrak{U}}
+\newcommand{\fV}{\mathfrak{V}}
+\newcommand{\fW}{\mathfrak{W}}
+\newcommand{\fX}{\mathfrak{X}}
+\newcommand{\fY}{\mathfrak{Y}}
+\newcommand{\fZ}{\mathfrak{Z}}
+
+
+%%%%%%%%%%%%% mathematical script (euler)  %%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ms}[1]{\mathscr{#1}}
+
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+
+%%%%%%%%%%    Math operators    %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\Re}{\mathop{\textnormal{Re}}}  % real part
+\renewcommand{\Im}{\mathop{\textnormal{Im}}}  % imaginary part
+
+
+%%%%%%%%%%%  FURTHER COMMANDS  %%%%%%%%%%%%%%%
+
+\newcommand{\Id}{\mathrm{Id}}
+
+
+%%%%%%%%%%%  STUDENT COMMANDS  %%%%%%%%%%%%%%%
+%% Hier können Sie Ihre eigene LaTeX kommandos hinzufügen. %%
+\newtheorem*{theorem*}{Theorem}
+%% this allows for theorems which are not automatically numbered
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{example}{Example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+{\Large\bf Blatt 09}\\  tags:\  {}\\
+\hrule
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip
+
+\section*{Nr 3.4}
+\subsection*{1}
+Injektiv: \bigskip
+Sei $x,y\in [0,+\infty [, f(x)=f(y)$\medskip
+
+$x^{2}=y^{2}$ \\
+$x=y$
+
+\bigskip
+
+Surjektiv:\\
+Für jedes $x\in \mathbb{R}$ existiert ein $c^{2}=x, c\in \mathbb{R} $\\
+$[0,\infty [\subseteq \mathbb{R} $
+\subsection*{2}
+Nicht injektiv:\medskip
+
+$-1 \neq 1$\\
+$f_{2}(-1)=(-1)^{4}=1=1^{4}=f_{2}(1)$
+\bigskip
+
+Nicht surjektiv: \\
+Sei $-1=f_{2}(x)=x^{4}$\\
+$-1=(x^{2})^{2}=y^{2}$.
+Dies ist ein Widerspruch, da die Gleichung $y^{2}+1=0$ keine Lösung in den reellen Zahlen hat.$-1$ ist also kein Funktionswert eines $x\in \mathbb{R}$
+\subsection*{3}
+Injektiv:\medskip
+
+Sei $f(x),f(y)\in \mathbb{N}\cap ]3,\infty [$
+			\begin{align*}
+				x+3=y+3 \\
+				x=y
+			\end{align*}
+			\medskip
+
+			Surjektiv:\medskip
+
+			Sei $x\in \mathbb{N} \cap ]3,\infty [$
+\begin{align*}
+	x-3>1             \\
+	x-3\in \mathbb{N} \\
+	f(x-3) = x-3+3 = x
+\end{align*}
+\subsection*{4)}
+Nicht injektiv: \medskip
+\begin{align*}
+	(2,3)\neq (3,2) \\
+	2+3=3+2
+\end{align*}
+Surjektiv: \medskip
+
+Sei $x\in \mathbb{R} \backslash \{ 0\}$\\
+$$
+	x=f_{4}(\frac{x}{2},\frac{x}{2})=\frac{x}{2}+\frac{x}{2}
+$$
+Sei $x=0$\\
+$$
+	x=f_{4}(1,-1)=1-1
+$$
+\subsection*{5)}
+Nicht surjektiv:\medskip
+
+\begin{align*}
+	1\in ]0,\infty[      \\
+	f_{5}(x)=\exp(x)+1=1 \\
+	\iff \exp(x)= 0
+\end{align*}
+Widerspruch zu (i), demnach kann es kein $x\in \mathbb{R}$ geben, sodass $f_{5}=1$.
+\medskip
+
+Bijektiv: \medskip
+
+Sei $x\neq y, x,y\in \mathbb{R} $, oBdA: $x<y$ .
+\begin{align}
+	 & x^{n}<y^{n}, \forall n< 1                                                 \\
+	 & \sum_{n=0}^{\infty}\frac{1}{n!}x^{n}<\sum_{n=0}^{\infty}\frac{1}{n!}y^{n} \\
+	 & \exp(x)<\exp(y)                                                           \\
+	 & \exp(x)\neq \exp(y)
+\end{align}
+\section*{3.5}
+Sei $b_{n}$ folgende Folge:
+\begin{align}
+	b_{n} =	 \lim \limits_{M \to\infty} \sum_{k=0}^{M}a_{n+k} \binom{n+k}{k}\cdot z_{0}^{k}
+\end{align}
+\subsection*{Lemma 1}
+\begin{align}
+	\forall N\in \mathbb{N}, \forall z\in B_{z}(r) :\sum_{n=0}^{N}a_{n}(z+z_{0})^{n}=\sum_{n=0}^{N}z_{n}\sum_{k=0}^{N-n}a_{n+k}\binom{n+k}{k}\cdot z_{0}^{k}
+\end{align}
+
+\subsection*{Lemma 2}
+\begin{align*}
+	2\cdot \sum_{n=0}^{N}z_{n}\sum_{k=0}^{N-n}a_{n+k}\binom{n+k}{k}\cdot z_{0}^{k}=\sum_{n=0}^{N}z^{n} \sum_{n=0}^{N}a_{n+k}\binom{n+k}{k}\cdot z_{0}^{k}, \forall N\in \mathbb{N},\forall z\in B_{r}(z_{0})
+\end{align*}
+\subsection*{Beweis}
+Es gilt
+Nach Lemma 1 und Lemma 2 für alle $z\in B_{r}(z_{0})$
+\begin{align*}
+	 & \sum_{n=0}^{N}a_{n}(z+z_{0})^{n}=\sum_{n=0}^{N}z^{n}\cdot \frac{1}{2}\cdot \sum_{n=0}^{N}a_{n+k}\binom{n+k}{k}\cdot z_{0}^{k}                               \\
+	 & \lim \limits_{N\to\infty }
+	\sum_{n=0}^{N}a_{n}(z+z_{0})^{n}=\lim \limits_{N \to\infty}\sum_{n=0}^{N}z^{n}\cdot \frac{1}{2}\cdot \sum_{n=0}^{N}a_{n+k}\binom{n+k}{k}\cdot z_{0}^{k}        \\
+	 & P(z+z_{0})=\lim \limits_{N \to\infty}\sum_{n=0}^{N}z^{n}\cdot \frac{1}{2}\cdot \lim \limits_{M \to\infty}\sum_{n=0}^{M}a_{n+k}\binom{n+k}{k}\cdot z_{0}^{k} \\
+	 & P(z+z_{0})=\sum_{n=0}^{\infty }z^{n}\cdot b_{n}=Q(z)                                                                                                        \\
+\end{align*}
+
+\section*{3.5}
+\begin{align*}
+	P(z+z_{0})=\sum_{n=0}^{\infty}a_{n}(z+z_{0})^{n} = \sum_{n=0}^{\infty}a_{n}\cdot \sum_{k=0}^{n}\binom{n}{k}z^{n-k}z_{0}^{k}=\sum_{n=0}^{\infty}\cdot \sum_{k=0}^{n}z^{n-k}a_{n}\binom{n}{k}z_{0}^{k}
+\end{align*}
+
+Es seien alle Summanden der Summe betrachtet, die den speziellen Faktor $z^{i}, i=n-k$ haben.
+\begin{align*}
+	z^{n-k}\cdot a_{n}\cdot z_{0}^{k}\binom{n}{k} \\
+	\textnormal{Sei $i=n-k$}                      \\
+	z^{i}a_{i+k}\cdot z_{0}^{k}\binom{i+k}{k}
+\end{align*}
+
+Die Summe alle Summanden der Summe $P(z+z_{0})$, die den Faktor $z^{i}$ haben kann wie folgt geschrieben werden:\begin{align*}
+	S_{i}=z^{i}\cdot \sum_{k=0}^{\infty}a_{i+k}\binom{i+k}{k}\cdot z_{0}^{k}
+\end{align*}
+
+
+Da jeder Summand von $P(z+z_{0})$ den Faktor $z^{i}$ für ein $i\in \mathbb{N} $ enthält, kann $P(z+z_{0})^{n}$ auch so geschrieben werden:
+\begin{align*}
+	P(z+z_{0}) & =\sum_{n=0}^{\infty}S_{n}                                                                 \\
+	           & = \sum_{n=0}^{\infty}z^{n}\cdot \sum_{k=0}^{\infty}a_{n+k}\binom{n+{k}}{k}\cdot z_{0}^{k} \\
+	           & = \sum_{n=0}^{\infty}z^{n}\cdot b_{n}=Q(z)
+\end{align*}
+Dies gilt für alle $z\in \mathbb{C}$, sodass $(z+z_{0})\in B_{R}(0)$.\\
+Die Aussage gilt demnach für alle $z$,sodass $z\in B_{R-|z_{0}|}(0)=B_{r}(0)$
+\qed
+\end{document}
+
